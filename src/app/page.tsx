@@ -64,8 +64,8 @@ export default function Home() {
           <p className="text-sm uppercase tracking-wider text-soil-700">Regression</p>
           <h2 className="mt-2 text-2xl font-semibold text-leaf-900">Yield prediction</h2>
           <p className="mt-3 text-leaf-900/75">
-            Choose a country and crop, then move the rainfall, temperature and pesticide sliders to see the predicted
-            harvest change in real time, in t/ha, kg per acre and 90 kg bags.
+            Choose a country and crop, then move the temperature and pesticide sliders to see the predicted harvest
+            change in real time, in t/ha, kg per acre and 90 kg bags, and compare all crops side by side.
           </p>
           <span className="mt-5 inline-block text-soil-700 group-hover:underline">Try it →</span>
         </Link>
