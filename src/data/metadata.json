@@ -1,0 +1,3646 @@
+{
+ "crop": {
+  "features": [
+   "N",
+   "P",
+   "K",
+   "temperature",
+   "humidity",
+   "ph",
+   "rainfall"
+  ],
+  "classes": [
+   "apple",
+   "banana",
+   "blackgram",
+   "chickpea",
+   "coconut",
+   "coffee",
+   "cotton",
+   "grapes",
+   "jute",
+   "kidneybeans",
+   "lentil",
+   "maize",
+   "mango",
+   "mothbeans",
+   "mungbean",
+   "muskmelon",
+   "orange",
+   "papaya",
+   "pigeonpeas",
+   "pomegranate",
+   "rice",
+   "watermelon"
+  ],
+  "ranges": {
+   "N": {
+    "min": 0.0,
+    "max": 140.0,
+    "median": 37.0
+   },
+   "P": {
+    "min": 5.0,
+    "max": 145.0,
+    "median": 51.0
+   },
+   "K": {
+    "min": 5.0,
+    "max": 205.0,
+    "median": 32.0
+   },
+   "temperature": {
+    "min": 8.825674745,
+    "max": 43.67549305,
+    "median": 25.5986932
+   },
+   "humidity": {
+    "min": 14.25803981,
+    "max": 99.98187601,
+    "median": 80.473145665
+   },
+   "ph": {
+    "min": 3.504752314,
+    "max": 9.93509073,
+    "median": 6.42504527
+   },
+   "rainfall": {
+    "min": 20.21126747,
+    "max": 298.5601175,
+    "median": 94.86762427
+   }
+  },
+  "crop_profiles": {
+   "apple": {
+    "N": 24.0,
+    "P": 136.5,
+    "K": 200.0,
+    "temperature": 22.6,
+    "humidity": 92.4,
+    "ph": 5.9,
+    "rainfall": 113.0
+   },
+   "banana": {
+    "N": 100.5,
+    "P": 81.0,
+    "K": 50.0,
+    "temperature": 27.4,
+    "humidity": 80.2,
+    "ph": 6.0,
+    "rainfall": 105.0
+   },
+   "blackgram": {
+    "N": 41.0,
+    "P": 67.0,
+    "K": 19.0,
+    "temperature": 29.7,
+    "humidity": 65.0,
+    "ph": 7.2,
+    "rainfall": 68.3
+   },
+   "chickpea": {
+    "N": 39.0,
+    "P": 68.0,
+    "K": 79.0,
+    "temperature": 18.9,
+    "humidity": 16.7,
+    "ph": 7.4,
+    "rainfall": 79.7
+   },
+   "coconut": {
+    "N": 24.0,
+    "P": 15.5,
+    "K": 31.0,
+    "temperature": 27.4,
+    "humidity": 95.0,
+    "ph": 6.0,
+    "rainfall": 172.0
+   },
+   "coffee": {
+    "N": 103.0,
+    "P": 29.0,
+    "K": 30.0,
+    "temperature": 25.7,
+    "humidity": 57.6,
+    "ph": 6.8,
+    "rainfall": 157.8
+   },
+   "cotton": {
+    "N": 117.0,
+    "P": 46.0,
+    "K": 19.0,
+    "temperature": 24.0,
+    "humidity": 80.0,
+    "ph": 6.8,
+    "rainfall": 80.2
+   },
+   "grapes": {
+    "N": 24.0,
+    "P": 133.0,
+    "K": 201.0,
+    "temperature": 23.0,
+    "humidity": 81.7,
+    "ph": 6.0,
+    "rainfall": 69.5
+   },
+   "jute": {
+    "N": 78.0,
+    "P": 46.0,
+    "K": 40.0,
+    "temperature": 25.0,
+    "humidity": 79.5,
+    "ph": 6.7,
+    "rainfall": 175.6
+   },
+   "kidneybeans": {
+    "N": 22.0,
+    "P": 67.0,
+    "K": 20.0,
+    "temperature": 19.9,
+    "humidity": 21.3,
+    "ph": 5.7,
+    "rainfall": 107.4
+   },
+   "lentil": {
+    "N": 16.5,
+    "P": 68.0,
+    "K": 19.0,
+    "temperature": 24.9,
+    "humidity": 64.1,
+    "ph": 7.0,
+    "rainfall": 46.6
+   },
+   "maize": {
+    "N": 76.0,
+    "P": 48.5,
+    "K": 20.0,
+    "temperature": 22.8,
+    "humidity": 65.3,
+    "ph": 6.3,
+    "rainfall": 83.5
+   },
+   "mango": {
+    "N": 21.0,
+    "P": 27.5,
+    "K": 30.0,
+    "temperature": 31.3,
+    "humidity": 50.3,
+    "ph": 5.7,
+    "rainfall": 94.9
+   },
+   "mothbeans": {
+    "N": 22.0,
+    "P": 48.5,
+    "K": 20.0,
+    "temperature": 28.4,
+    "humidity": 53.7,
+    "ph": 7.2,
+    "rainfall": 51.2
+   },
+   "mungbean": {
+    "N": 22.0,
+    "P": 47.0,
+    "K": 20.0,
+    "temperature": 28.4,
+    "humidity": 86.0,
+    "ph": 6.7,
+    "rainfall": 49.0
+   },
+   "muskmelon": {
+    "N": 100.0,
+    "P": 18.0,
+    "K": 50.0,
+    "temperature": 28.9,
+    "humidity": 92.1,
+    "ph": 6.4,
+    "rainfall": 24.7
+   },
+   "orange": {
+    "N": 19.0,
+    "P": 16.0,
+    "K": 10.0,
+    "temperature": 22.9,
+    "humidity": 92.0,
+    "ph": 7.0,
+    "rainfall": 110.7
+   },
+   "papaya": {
+    "N": 49.0,
+    "P": 60.0,
+    "K": 50.0,
+    "temperature": 33.3,
+    "humidity": 92.7,
+    "ph": 6.7,
+    "rainfall": 139.0
+   },
+   "pigeonpeas": {
+    "N": 20.0,
+    "P": 69.5,
+    "K": 20.0,
+    "temperature": 28.9,
+    "humidity": 47.2,
+    "ph": 5.7,
+    "rainfall": 154.3
+   },
+   "pomegranate": {
+    "N": 18.0,
+    "P": 20.0,
+    "K": 40.0,
+    "temperature": 22.4,
+    "humidity": 89.9,
+    "ph": 6.4,
+    "rainfall": 107.6
+   },
+   "rice": {
+    "N": 80.0,
+    "P": 47.0,
+    "K": 40.0,
+    "temperature": 23.7,
+    "humidity": 82.2,
+    "ph": 6.4,
+    "rainfall": 233.1
+   },
+   "watermelon": {
+    "N": 99.0,
+    "P": 17.5,
+    "K": 50.5,
+    "temperature": 25.6,
+    "humidity": 85.0,
+    "ph": 6.5,
+    "rainfall": 50.7
+   }
+  },
+  "crop_iqr": {
+   "apple": {
+    "N": [
+     10.0,
+     30.0
+    ],
+    "P": [
+     126.8,
+     141.0
+    ],
+    "K": [
+     197.0,
+     203.0
+    ],
+    "temperature": [
+     22.2,
+     23.3
+    ],
+    "humidity": [
+     91.0,
+     93.5
+    ],
+    "ph": [
+     5.7,
+     6.1
+    ],
+    "rainfall": [
+     106.1,
+     118.4
+    ]
+   },
+   "banana": {
+    "N": [
+     92.0,
+     108.2
+    ],
+    "P": [
+     75.0,
+     88.0
+    ],
+    "K": [
+     47.0,
+     53.0
+    ],
+    "temperature": [
+     26.1,
+     28.7
+    ],
+    "humidity": [
+     78.1,
+     83.0
+    ],
+    "ph": [
+     5.7,
+     6.2
+    ],
+    "rainfall": [
+     96.5,
+     112.1
+    ]
+   },
+   "blackgram": {
+    "N": [
+     28.8,
+     52.0
+    ],
+    "P": [
+     62.0,
+     74.0
+    ],
+    "K": [
+     16.8,
+     22.0
+    ],
+    "temperature": [
+     27.8,
+     32.4
+    ],
+    "humidity": [
+     63.0,
+     67.7
+    ],
+    "ph": [
+     6.8,
+     7.4
+    ],
+    "rainfall": [
+     64.0,
+     71.4
+    ]
+   },
+   "chickpea": {
+    "N": [
+     30.0,
+     52.0
+    ],
+    "P": [
+     61.0,
+     74.0
+    ],
+    "K": [
+     77.0,
+     83.0
+    ],
+    "temperature": [
+     17.9,
+     19.7
+    ],
+    "humidity": [
+     15.4,
+     18.3
+    ],
+    "ph": [
+     6.6,
+     7.9
+    ],
+    "rainfall": [
+     73.6,
+     85.8
+    ]
+   },
+   "coconut": {
+    "N": [
+     13.8,
+     31.0
+    ],
+    "P": [
+     9.8,
+     24.2
+    ],
+    "K": [
+     29.0,
+     33.0
+    ],
+    "temperature": [
+     26.3,
+     28.6
+    ],
+    "humidity": [
+     92.5,
+     96.8
+    ],
+    "ph": [
+     5.7,
+     6.2
+    ],
+    "rainfall": [
+     149.1,
+     202.4
+    ]
+   },
+   "coffee": {
+    "N": [
+     89.0,
+     112.0
+    ],
+    "P": [
+     23.0,
+     34.2
+    ],
+    "K": [
+     27.0,
+     33.0
+    ],
+    "temperature": [
+     24.2,
+     26.7
+    ],
+    "humidity": [
+     53.8,
+     63.6
+    ],
+    "ph": [
+     6.4,
+     7.1
+    ],
+    "rainfall": [
+     136.0,
+     181.5
+    ]
+   },
+   "cotton": {
+    "N": [
+     107.8,
+     127.5
+    ],
+    "P": [
+     40.0,
+     52.0
+    ],
+    "K": [
+     17.0,
+     22.0
+    ],
+    "temperature": [
+     23.0,
+     25.0
+    ],
+    "humidity": [
+     77.0,
+     82.4
+    ],
+    "ph": [
+     6.4,
+     7.4
+    ],
+    "rainfall": [
+     70.9,
+     90.4
+    ]
+   },
+   "grapes": {
+    "N": [
+     11.8,
+     35.0
+    ],
+    "P": [
+     125.8,
+     139.0
+    ],
+    "K": [
+     197.0,
+     203.0
+    ],
+    "temperature": [
+     16.2,
+     30.8
+    ],
+    "humidity": [
+     80.9,
+     82.9
+    ],
+    "ph": [
+     5.8,
+     6.3
+    ],
+    "rainfall": [
+     66.8,
+     71.6
+    ]
+   },
+   "jute": {
+    "N": [
+     70.0,
+     88.2
+    ],
+    "P": [
+     41.0,
+     53.2
+    ],
+    "K": [
+     37.0,
+     43.0
+    ],
+    "temperature": [
+     23.9,
+     25.9
+    ],
+    "humidity": [
+     74.6,
+     83.2
+    ],
+    "ph": [
+     6.3,
+     7.1
+    ],
+    "rainfall": [
+     161.1,
+     187.6
+    ]
+   },
+   "kidneybeans": {
+    "N": [
+     11.8,
+     28.0
+    ],
+    "P": [
+     61.0,
+     74.0
+    ],
+    "K": [
+     17.0,
+     22.2
+    ],
+    "temperature": [
+     18.3,
+     22.0
+    ],
+    "humidity": [
+     19.7,
+     23.4
+    ],
+    "ph": [
+     5.6,
+     5.9
+    ],
+    "rainfall": [
+     85.8,
+     129.4
+    ]
+   },
+   "lentil": {
+    "N": [
+     9.0,
+     29.2
+    ],
+    "P": [
+     61.8,
+     75.0
+    ],
+    "K": [
+     17.0,
+     22.0
+    ],
+    "temperature": [
+     21.7,
+     27.4
+    ],
+    "humidity": [
+     62.5,
+     67.4
+    ],
+    "ph": [
+     6.5,
+     7.4
+    ],
+    "rainfall": [
+     41.6,
+     50.0
+    ]
+   },
+   "maize": {
+    "N": [
+     67.8,
+     87.0
+    ],
+    "P": [
+     42.8,
+     56.0
+    ],
+    "K": [
+     17.0,
+     22.0
+    ],
+    "temperature": [
+     19.8,
+     24.9
+    ],
+    "humidity": [
+     60.6,
+     69.4
+    ],
+    "ph": [
+     5.9,
+     6.6
+    ],
+    "rainfall": [
+     70.4,
+     99.9
+    ]
+   },
+   "mango": {
+    "N": [
+     9.0,
+     30.2
+    ],
+    "P": [
+     19.8,
+     35.0
+    ],
+    "K": [
+     27.0,
+     32.0
+    ],
+    "temperature": [
+     28.9,
+     33.4
+    ],
+    "humidity": [
+     47.9,
+     52.5
+    ],
+    "ph": [
+     5.2,
+     6.4
+    ],
+    "rainfall": [
+     91.6,
+     97.5
+    ]
+   },
+   "mothbeans": {
+    "N": [
+     11.0,
+     30.2
+    ],
+    "P": [
+     42.8,
+     55.0
+    ],
+    "K": [
+     18.0,
+     23.0
+    ],
+    "temperature": [
+     26.4,
+     30.1
+    ],
+    "humidity": [
+     46.7,
+     59.4
+    ],
+    "ph": [
+     5.4,
+     8.4
+    ],
+    "rainfall": [
+     38.0,
+     64.2
+    ]
+   },
+   "mungbean": {
+    "N": [
+     10.0,
+     31.0
+    ],
+    "P": [
+     40.0,
+     54.2
+    ],
+    "K": [
+     17.0,
+     22.0
+    ],
+    "temperature": [
+     27.9,
+     29.2
+    ],
+    "humidity": [
+     83.4,
+     87.8
+    ],
+    "ph": [
+     6.5,
+     7.0
+    ],
+    "rainfall": [
+     43.1,
+     54.8
+    ]
+   },
+   "muskmelon": {
+    "N": [
+     89.0,
+     111.0
+    ],
+    "P": [
+     12.0,
+     25.0
+    ],
+    "K": [
+     47.0,
+     52.2
+    ],
+    "temperature": [
+     28.0,
+     29.4
+    ],
+    "humidity": [
+     91.0,
+     93.8
+    ],
+    "ph": [
+     6.2,
+     6.6
+    ],
+    "rainfall": [
+     22.1,
+     26.9
+    ]
+   },
+   "orange": {
+    "N": [
+     9.0,
+     31.0
+    ],
+    "P": [
+     9.0,
+     23.0
+    ],
+    "K": [
+     8.0,
+     12.2
+    ],
+    "temperature": [
+     17.0,
+     29.6
+    ],
+    "humidity": [
+     91.0,
+     93.4
+    ],
+    "ph": [
+     6.5,
+     7.5
+    ],
+    "rainfall": [
+     106.2,
+     115.6
+    ]
+   },
+   "papaya": {
+    "N": [
+     39.0,
+     59.2
+    ],
+    "P": [
+     54.0,
+     65.0
+    ],
+    "K": [
+     47.0,
+     52.0
+    ],
+    "temperature": [
+     28.6,
+     39.1
+    ],
+    "humidity": [
+     91.2,
+     93.5
+    ],
+    "ph": [
+     6.6,
+     6.8
+    ],
+    "rainfall": [
+     81.9,
+     202.4
+    ]
+   },
+   "pigeonpeas": {
+    "N": [
+     10.0,
+     30.2
+    ],
+    "P": [
+     61.0,
+     73.2
+    ],
+    "K": [
+     18.0,
+     23.0
+    ],
+    "temperature": [
+     22.9,
+     31.5
+    ],
+    "humidity": [
+     38.4,
+     57.0
+    ],
+    "ph": [
+     5.0,
+     6.4
+    ],
+    "rainfall": [
+     122.3,
+     177.9
+    ]
+   },
+   "pomegranate": {
+    "N": [
+     8.0,
+     29.2
+    ],
+    "P": [
+     13.0,
+     25.0
+    ],
+    "K": [
+     38.0,
+     43.0
+    ],
+    "temperature": [
+     19.8,
+     23.9
+    ],
+    "humidity": [
+     88.1,
+     92.4
+    ],
+    "ph": [
+     6.0,
+     6.9
+    ],
+    "rainfall": [
+     105.0,
+     110.0
+    ]
+   },
+   "rice": {
+    "N": [
+     69.0,
+     91.0
+    ],
+    "P": [
+     41.0,
+     54.2
+    ],
+    "K": [
+     38.0,
+     42.0
+    ],
+    "temperature": [
+     21.9,
+     25.5
+    ],
+    "humidity": [
+     81.0,
+     83.5
+    ],
+    "ph": [
+     5.9,
+     7.0
+    ],
+    "rainfall": [
+     204.3,
+     264.1
+    ]
+   },
+   "watermelon": {
+    "N": [
+     89.0,
+     110.0
+    ],
+    "P": [
+     10.0,
+     23.0
+    ],
+    "K": [
+     47.0,
+     53.0
+    ],
+    "temperature": [
+     24.9,
+     26.3
+    ],
+    "humidity": [
+     83.0,
+     87.6
+    ],
+    "ph": [
+     6.3,
+     6.8
+    ],
+    "rainfall": [
+     46.1,
+     56.4
+    ]
+   }
+  },
+  "metrics": {
+   "test_accuracy": 0.9955,
+   "test_macro_f1": 0.9954,
+   "cv_accuracy": 0.9949
+  },
+  "best_params": {
+   "max_depth": null,
+   "max_features": 0.5,
+   "min_samples_leaf": 2,
+   "n_estimators": 100
+  },
+  "feature_importance": {
+   "rainfall": 0.2394,
+   "humidity": 0.2331,
+   "K": 0.1727,
+   "P": 0.1572,
+   "N": 0.1072,
+   "temperature": 0.0523,
+   "ph": 0.0382
+  },
+  "model_comparison": [
+   {
+    "Model": "Naive Bayes",
+    "CV accuracy": 0.9949,
+    "CV macro F1": 0.9949
+   },
+   {
+    "Model": "Random Forest",
+    "CV accuracy": 0.9943,
+    "CV macro F1": 0.9943
+   },
+   {
+    "Model": "Gradient Boosting",
+    "CV accuracy": 0.9852,
+    "CV macro F1": 0.9852
+   },
+   {
+    "Model": "Decision Tree",
+    "CV accuracy": 0.9824,
+    "CV macro F1": 0.9823
+   },
+   {
+    "Model": "KNN",
+    "CV accuracy": 0.9739,
+    "CV macro F1": 0.9737
+   },
+   {
+    "Model": "Logistic Regression",
+    "CV accuracy": 0.971,
+    "CV macro F1": 0.9709
+   }
+  ]
+ },
+ "yield": {
+  "countries": [
+   "Albania",
+   "Algeria",
+   "Angola",
+   "Argentina",
+   "Armenia",
+   "Australia",
+   "Austria",
+   "Azerbaijan",
+   "Bahamas",
+   "Bahrain",
+   "Bangladesh",
+   "Belarus",
+   "Belgium",
+   "Botswana",
+   "Brazil",
+   "Bulgaria",
+   "Burkina Faso",
+   "Burundi",
+   "Cameroon",
+   "Canada",
+   "Central African Republic",
+   "Chile",
+   "Colombia",
+   "Croatia",
+   "Denmark",
+   "Dominican Republic",
+   "Ecuador",
+   "Egypt",
+   "El Salvador",
+   "Eritrea",
+   "Estonia",
+   "Finland",
+   "France",
+   "Germany",
+   "Ghana",
+   "Greece",
+   "Guatemala",
+   "Guinea",
+   "Guyana",
+   "Haiti",
+   "Honduras",
+   "Hungary",
+   "India",
+   "Indonesia",
+   "Iraq",
+   "Ireland",
+   "Italy",
+   "Jamaica",
+   "Japan",
+   "Kazakhstan",
+   "Kenya",
+   "Latvia",
+   "Lebanon",
+   "Lesotho",
+   "Libya",
+   "Lithuania",
+   "Madagascar",
+   "Malawi",
+   "Malaysia",
+   "Mali",
+   "Mauritania",
+   "Mauritius",
+   "Mexico",
+   "Montenegro",
+   "Morocco",
+   "Mozambique",
+   "Namibia",
+   "Nepal",
+   "Netherlands",
+   "New Zealand",
+   "Nicaragua",
+   "Niger",
+   "Norway",
+   "Pakistan",
+   "Papua New Guinea",
+   "Peru",
+   "Poland",
+   "Portugal",
+   "Qatar",
+   "Romania",
+   "Rwanda",
+   "Saudi Arabia",
+   "Senegal",
+   "Slovenia",
+   "South Africa",
+   "Spain",
+   "Sri Lanka",
+   "Sudan",
+   "Suriname",
+   "Sweden",
+   "Switzerland",
+   "Tajikistan",
+   "Thailand",
+   "Tunisia",
+   "Turkey",
+   "Uganda",
+   "Ukraine",
+   "United Kingdom",
+   "Uruguay",
+   "Zambia",
+   "Zimbabwe"
+  ],
+  "crops": [
+   "Cassava",
+   "Maize",
+   "Plantains and others",
+   "Potatoes",
+   "Rice, paddy",
+   "Sorghum",
+   "Soybeans",
+   "Sweet potatoes",
+   "Wheat",
+   "Yams"
+  ],
+  "year_range": [
+   1990,
+   2013
+  ],
+  "country_defaults": {
+   "Albania": {
+    "rainfall": 1485.0,
+    "pesticides": 982.32,
+    "temperature": 17.41
+   },
+   "Algeria": {
+    "rainfall": 89.0,
+    "pesticides": 17278.65,
+    "temperature": 17.65
+   },
+   "Angola": {
+    "rainfall": 1010.0,
+    "pesticides": 40.0,
+    "temperature": 24.55
+   },
+   "Argentina": {
+    "rainfall": 591.0,
+    "pesticides": 171945.54,
+    "temperature": 16.66
+   },
+   "Armenia": {
+    "rainfall": 562.0,
+    "pesticides": 278.72,
+    "temperature": 11.08
+   },
+   "Australia": {
+    "rainfall": 534.0,
+    "pesticides": 45177.18,
+    "temperature": 17.09
+   },
+   "Austria": {
+    "rainfall": 1110.0,
+    "pesticides": 3108.6,
+    "temperature": 10.03
+   },
+   "Azerbaijan": {
+    "rainfall": 447.0,
+    "pesticides": 489.8,
+    "temperature": 14.12
+   },
+   "Bahamas": {
+    "rainfall": 1292.0,
+    "pesticides": 268.2,
+    "temperature": 25.88
+   },
+   "Bahrain": {
+    "rainfall": 83.0,
+    "pesticides": 9.14,
+    "temperature": 27.86
+   },
+   "Bangladesh": {
+    "rainfall": 2666.0,
+    "pesticides": 15330.16,
+    "temperature": 26.59
+   },
+   "Belarus": {
+    "rainfall": 618.0,
+    "pesticides": 9163.51,
+    "temperature": 7.83
+   },
+   "Belgium": {
+    "rainfall": 847.0,
+    "pesticides": 5905.6,
+    "temperature": 10.36
+   },
+   "Botswana": {
+    "rainfall": 416.0,
+    "pesticides": 17.0,
+    "temperature": 18.69
+   },
+   "Brazil": {
+    "rainfall": 1761.0,
+    "pesticides": 367778.0,
+    "temperature": 22.48
+   },
+   "Bulgaria": {
+    "rainfall": 608.0,
+    "pesticides": 1197.0,
+    "temperature": 11.26
+   },
+   "Burkina Faso": {
+    "rainfall": 748.0,
+    "pesticides": 843.0,
+    "temperature": 29.41
+   },
+   "Burundi": {
+    "rainfall": 1274.0,
+    "pesticides": 956.06,
+    "temperature": 21.53
+   },
+   "Cameroon": {
+    "rainfall": 1604.0,
+    "pesticides": 1372.47,
+    "temperature": 25.45
+   },
+   "Canada": {
+    "rainfall": 537.0,
+    "pesticides": 81659.8,
+    "temperature": 8.76
+   },
+   "Central African Republic": {
+    "rainfall": 1342.0,
+    "pesticides": 22.87,
+    "temperature": 25.69
+   },
+   "Chile": {
+    "rainfall": 1522.0,
+    "pesticides": 9830.72,
+    "temperature": 9.51
+   },
+   "Colombia": {
+    "rainfall": 3240.0,
+    "pesticides": 54563.38,
+    "temperature": 25.23
+   },
+   "Croatia": {
+    "rainfall": 1113.0,
+    "pesticides": 1836.21,
+    "temperature": 11.58
+   },
+   "Denmark": {
+    "rainfall": 703.0,
+    "pesticides": 4118.0,
+    "temperature": 8.81
+   },
+   "Dominican Republic": {
+    "rainfall": 1410.0,
+    "pesticides": 6316.61,
+    "temperature": 26.7
+   },
+   "Ecuador": {
+    "rainfall": 2274.0,
+    "pesticides": 6471.77,
+    "temperature": 20.3
+   },
+   "Egypt": {
+    "rainfall": 51.0,
+    "pesticides": 13653.0,
+    "temperature": 22.18
+   },
+   "El Salvador": {
+    "rainfall": 1784.0,
+    "pesticides": 6005.08,
+    "temperature": 26.36
+   },
+   "Eritrea": {
+    "rainfall": 383.0,
+    "pesticides": 27.63,
+    "temperature": 25.87
+   },
+   "Estonia": {
+    "rainfall": 626.0,
+    "pesticides": 567.0,
+    "temperature": 7.28
+   },
+   "Finland": {
+    "rainfall": 536.0,
+    "pesticides": 1475.39,
+    "temperature": 6.17
+   },
+   "France": {
+    "rainfall": 867.0,
+    "pesticides": 66497.29,
+    "temperature": 11.01
+   },
+   "Germany": {
+    "rainfall": 700.0,
+    "pesticides": 43756.1,
+    "temperature": 8.43
+   },
+   "Ghana": {
+    "rainfall": 1187.0,
+    "pesticides": 378.97,
+    "temperature": 27.24
+   },
+   "Greece": {
+    "rainfall": 652.0,
+    "pesticides": 8081.72,
+    "temperature": 19.36
+   },
+   "Guatemala": {
+    "rainfall": 1996.0,
+    "pesticides": 20489.4,
+    "temperature": 20.37
+   },
+   "Guinea": {
+    "rainfall": 1651.0,
+    "pesticides": 877.19,
+    "temperature": 27.29
+   },
+   "Guyana": {
+    "rainfall": 2387.0,
+    "pesticides": 358.72,
+    "temperature": 27.3
+   },
+   "Haiti": {
+    "rainfall": 1440.0,
+    "pesticides": 27.85,
+    "temperature": 27.2
+   },
+   "Honduras": {
+    "rainfall": 1976.0,
+    "pesticides": 7194.91,
+    "temperature": 24.86
+   },
+   "Hungary": {
+    "rainfall": 589.0,
+    "pesticides": 7744.5,
+    "temperature": 12.44
+   },
+   "India": {
+    "rainfall": 1083.0,
+    "pesticides": 45620.0,
+    "temperature": 26.75
+   },
+   "Indonesia": {
+    "rainfall": 2702.0,
+    "pesticides": 1597.0,
+    "temperature": 27.02
+   },
+   "Iraq": {
+    "rainfall": 216.0,
+    "pesticides": 2162.6,
+    "temperature": 23.45
+   },
+   "Ireland": {
+    "rainfall": 1118.0,
+    "pesticides": 2950.8,
+    "temperature": 9.28
+   },
+   "Italy": {
+    "rainfall": 832.0,
+    "pesticides": 55633.0,
+    "temperature": 10.82
+   },
+   "Jamaica": {
+    "rainfall": 2051.0,
+    "pesticides": 909.71,
+    "temperature": 27.41
+   },
+   "Japan": {
+    "rainfall": 1668.0,
+    "pesticides": 52794.3,
+    "temperature": 15.45
+   },
+   "Kazakhstan": {
+    "rainfall": 250.0,
+    "pesticides": 8738.38,
+    "temperature": 7.1
+   },
+   "Kenya": {
+    "rainfall": 630.0,
+    "pesticides": 1578.0,
+    "temperature": 16.91
+   },
+   "Latvia": {
+    "rainfall": 641.0,
+    "pesticides": 1250.0,
+    "temperature": 7.25
+   },
+   "Lebanon": {
+    "rainfall": 661.0,
+    "pesticides": 1816.0,
+    "temperature": 20.08
+   },
+   "Lesotho": {
+    "rainfall": 788.0,
+    "pesticides": 62.32,
+    "temperature": 14.03
+   },
+   "Libya": {
+    "rainfall": 56.0,
+    "pesticides": 3548.0,
+    "temperature": 20.36
+   },
+   "Lithuania": {
+    "rainfall": 656.0,
+    "pesticides": 2515.69,
+    "temperature": 7.42
+   },
+   "Madagascar": {
+    "rainfall": 1513.0,
+    "pesticides": 507.94,
+    "temperature": 19.34
+   },
+   "Malawi": {
+    "rainfall": 1181.0,
+    "pesticides": 1500.27,
+    "temperature": 19.68
+   },
+   "Malaysia": {
+    "rainfall": 2875.0,
+    "pesticides": 61445.6,
+    "temperature": 27.8
+   },
+   "Mali": {
+    "rainfall": 282.0,
+    "pesticides": 1.52,
+    "temperature": 28.53
+   },
+   "Mauritania": {
+    "rainfall": 92.0,
+    "pesticides": 26.41,
+    "temperature": 28.24
+   },
+   "Mauritius": {
+    "rainfall": 2041.0,
+    "pesticides": 671.77,
+    "temperature": 24.31
+   },
+   "Mexico": {
+    "rainfall": 758.0,
+    "pesticides": 59920.18,
+    "temperature": 21.34
+   },
+   "Montenegro": {
+    "rainfall": 241.0,
+    "pesticides": 82.0,
+    "temperature": 12.87
+   },
+   "Morocco": {
+    "rainfall": 346.0,
+    "pesticides": 13697.0,
+    "temperature": 18.7
+   },
+   "Mozambique": {
+    "rainfall": 1032.0,
+    "pesticides": 766.93,
+    "temperature": 21.37
+   },
+   "Namibia": {
+    "rainfall": 285.0,
+    "pesticides": 56.0,
+    "temperature": 20.73
+   },
+   "Nepal": {
+    "rainfall": 1500.0,
+    "pesticides": 454.53,
+    "temperature": 15.79
+   },
+   "Netherlands": {
+    "rainfall": 778.0,
+    "pesticides": 10720.17,
+    "temperature": 9.54
+   },
+   "New Zealand": {
+    "rainfall": 1732.0,
+    "pesticides": 5086.0,
+    "temperature": 13.57
+   },
+   "Nicaragua": {
+    "rainfall": 2280.0,
+    "pesticides": 4413.82,
+    "temperature": 27.26
+   },
+   "Niger": {
+    "rainfall": 151.0,
+    "pesticides": 21.37,
+    "temperature": 30.42
+   },
+   "Norway": {
+    "rainfall": 1414.0,
+    "pesticides": 761.97,
+    "temperature": 3.5
+   },
+   "Pakistan": {
+    "rainfall": 494.0,
+    "pesticides": 0.92,
+    "temperature": 25.24
+   },
+   "Papua New Guinea": {
+    "rainfall": 3142.0,
+    "pesticides": 105.0,
+    "temperature": 25.44
+   },
+   "Peru": {
+    "rainfall": 1738.0,
+    "pesticides": 17942.97,
+    "temperature": 17.0
+   },
+   "Poland": {
+    "rainfall": 600.0,
+    "pesticides": 22204.46,
+    "temperature": 9.32
+   },
+   "Portugal": {
+    "rainfall": 854.0,
+    "pesticides": 10126.8,
+    "temperature": 16.77
+   },
+   "Qatar": {
+    "rainfall": 74.0,
+    "pesticides": 68.0,
+    "temperature": 28.68
+   },
+   "Romania": {
+    "rainfall": 637.0,
+    "pesticides": 6947.9,
+    "temperature": 13.94
+   },
+   "Rwanda": {
+    "rainfall": 1212.0,
+    "pesticides": 1841.5,
+    "temperature": 19.93
+   },
+   "Saudi Arabia": {
+    "rainfall": 59.0,
+    "pesticides": 5412.5,
+    "temperature": 27.68
+   },
+   "Senegal": {
+    "rainfall": 686.0,
+    "pesticides": 722.53,
+    "temperature": 24.7
+   },
+   "Slovenia": {
+    "rainfall": 1162.0,
+    "pesticides": 917.49,
+    "temperature": 11.58
+   },
+   "South Africa": {
+    "rainfall": 495.0,
+    "pesticides": 26857.0,
+    "temperature": 17.32
+   },
+   "Spain": {
+    "rainfall": 636.0,
+    "pesticides": 54197.0,
+    "temperature": 15.71
+   },
+   "Sri Lanka": {
+    "rainfall": 1712.0,
+    "pesticides": 1235.31,
+    "temperature": 27.03
+   },
+   "Sudan": {
+    "rainfall": 1712.0,
+    "pesticides": 2469.47,
+    "temperature": 28.74
+   },
+   "Suriname": {
+    "rainfall": 2331.0,
+    "pesticides": 537.49,
+    "temperature": 27.17
+   },
+   "Sweden": {
+    "rainfall": 624.0,
+    "pesticides": 1620.0,
+    "temperature": 7.1
+   },
+   "Switzerland": {
+    "rainfall": 1537.0,
+    "pesticides": 2098.5,
+    "temperature": 7.94
+   },
+   "Tajikistan": {
+    "rainfall": 691.0,
+    "pesticides": 264.6,
+    "temperature": 10.1
+   },
+   "Thailand": {
+    "rainfall": 1622.0,
+    "pesticides": 8136.0,
+    "temperature": 28.98
+   },
+   "Tunisia": {
+    "rainfall": 207.0,
+    "pesticides": 422.24,
+    "temperature": 20.0
+   },
+   "Turkey": {
+    "rainfall": 593.0,
+    "pesticides": 39440.0,
+    "temperature": 16.56
+   },
+   "Uganda": {
+    "rainfall": 1180.0,
+    "pesticides": 88.0,
+    "temperature": 24.13
+   },
+   "Ukraine": {
+    "rainfall": 565.0,
+    "pesticides": 86781.8,
+    "temperature": 10.33
+   },
+   "United Kingdom": {
+    "rainfall": 1220.0,
+    "pesticides": 17673.46,
+    "temperature": 9.24
+   },
+   "Uruguay": {
+    "rainfall": 1300.0,
+    "pesticides": 19028.6,
+    "temperature": 15.92
+   },
+   "Zambia": {
+    "rainfall": 1020.0,
+    "pesticides": 1670.0,
+    "temperature": 20.14
+   },
+   "Zimbabwe": {
+    "rainfall": 657.0,
+    "pesticides": 2550.07,
+    "temperature": 19.76
+   }
+  },
+  "country_ranges": {
+   "Albania": {
+    "pesticides": [
+     121.0,
+     1311.17
+    ],
+    "temperature": [
+     15.36,
+     17.41
+    ]
+   },
+   "Algeria": {
+    "pesticides": [
+     322.84,
+     17379.76
+    ],
+    "temperature": [
+     16.26,
+     18.13
+    ]
+   },
+   "Angola": {
+    "pesticides": [
+     23.0,
+     336.0
+    ],
+    "temperature": [
+     23.96,
+     24.96
+    ]
+   },
+   "Argentina": {
+    "pesticides": [
+     26156.0,
+     171945.54
+    ],
+    "temperature": [
+     16.66,
+     18.41
+    ]
+   },
+   "Armenia": {
+    "pesticides": [
+     8.0,
+     278.72
+    ],
+    "temperature": [
+     7.44,
+     11.31
+    ]
+   },
+   "Australia": {
+    "pesticides": [
+     17866.0,
+     48687.88
+    ],
+    "temperature": [
+     15.91,
+     17.12
+    ]
+   },
+   "Austria": {
+    "pesticides": [
+     3079.2,
+     4487.0
+    ],
+    "temperature": [
+     7.4,
+     10.08
+    ]
+   },
+   "Azerbaijan": {
+    "pesticides": [
+     148.68,
+     516.35
+    ],
+    "temperature": [
+     10.53,
+     14.12
+    ]
+   },
+   "Bahamas": {
+    "pesticides": [
+     268.2,
+     484.59
+    ],
+    "temperature": [
+     24.77,
+     25.94
+    ]
+   },
+   "Bahrain": {
+    "pesticides": [
+     0.91,
+     30.86
+    ],
+    "temperature": [
+     25.09,
+     28.0
+    ]
+   },
+   "Bangladesh": {
+    "pesticides": [
+     1266.0,
+     15330.16
+    ],
+    "temperature": [
+     25.55,
+     26.65
+    ]
+   },
+   "Belarus": {
+    "pesticides": [
+     8306.31,
+     9578.67
+    ],
+    "temperature": [
+     5.32,
+     7.83
+    ]
+   },
+   "Belgium": {
+    "pesticides": [
+     4644.53,
+     9776.0
+    ],
+    "temperature": [
+     9.74,
+     11.69
+    ]
+   },
+   "Botswana": {
+    "pesticides": [
+     17.0,
+     19.0
+    ],
+    "temperature": [
+     18.69,
+     20.59
+    ]
+   },
+   "Brazil": {
+    "pesticides": [
+     49695.0,
+     367778.0
+    ],
+    "temperature": [
+     22.26,
+     23.15
+    ]
+   },
+   "Bulgaria": {
+    "pesticides": [
+     1197.0,
+     3906.0
+    ],
+    "temperature": [
+     8.14,
+     11.26
+    ]
+   },
+   "Burkina Faso": {
+    "pesticides": [
+     1.28,
+     843.0
+    ],
+    "temperature": [
+     28.0,
+     29.41
+    ]
+   },
+   "Burundi": {
+    "pesticides": [
+     72.56,
+     956.06
+    ],
+    "temperature": [
+     20.97,
+     22.29
+    ]
+   },
+   "Cameroon": {
+    "pesticides": [
+     48.35,
+     1372.47
+    ],
+    "temperature": [
+     24.6,
+     25.7
+    ]
+   },
+   "Canada": {
+    "pesticides": [
+     29206.0,
+     81659.8
+    ],
+    "temperature": [
+     6.11,
+     8.76
+    ]
+   },
+   "Central African Republic": {
+    "pesticides": [
+     0.04,
+     22.87
+    ],
+    "temperature": [
+     24.81,
+     26.17
+    ]
+   },
+   "Chile": {
+    "pesticides": [
+     9830.72,
+     15373.0
+    ],
+    "temperature": [
+     8.91,
+     10.23
+    ]
+   },
+   "Colombia": {
+    "pesticides": [
+     14961.81,
+     117881.45
+    ],
+    "temperature": [
+     24.3,
+     25.37
+    ]
+   },
+   "Croatia": {
+    "pesticides": [
+     1540.0,
+     3418.0
+    ],
+    "temperature": [
+     9.24,
+     11.58
+    ]
+   },
+   "Denmark": {
+    "pesticides": [
+     2836.0,
+     5716.0
+    ],
+    "temperature": [
+     7.31,
+     9.87
+    ]
+   },
+   "Dominican Republic": {
+    "pesticides": [
+     3449.0,
+     7182.0
+    ],
+    "temperature": [
+     26.3,
+     27.15
+    ]
+   },
+   "Ecuador": {
+    "pesticides": [
+     1302.49,
+     31637.12
+    ],
+    "temperature": [
+     19.89,
+     21.23
+    ]
+   },
+   "Egypt": {
+    "pesticides": [
+     4175.0,
+     13991.0
+    ],
+    "temperature": [
+     20.6,
+     23.09
+    ]
+   },
+   "El Salvador": {
+    "pesticides": [
+     1922.78,
+     6005.08
+    ],
+    "temperature": [
+     25.67,
+     26.48
+    ]
+   },
+   "Eritrea": {
+    "pesticides": [
+     4.44,
+     30.92
+    ],
+    "temperature": [
+     24.09,
+     25.87
+    ]
+   },
+   "Estonia": {
+    "pesticides": [
+     133.0,
+     567.0
+    ],
+    "temperature": [
+     4.63,
+     7.39
+    ]
+   },
+   "Finland": {
+    "pesticides": [
+     909.0,
+     2001.0
+    ],
+    "temperature": [
+     4.2,
+     6.77
+    ]
+   },
+   "France": {
+    "pesticides": [
+     61039.0,
+     114695.0
+    ],
+    "temperature": [
+     10.14,
+     12.33
+    ]
+   },
+   "Germany": {
+    "pesticides": [
+     25170.0,
+     45522.5
+    ],
+    "temperature": [
+     6.6,
+     9.18
+    ]
+   },
+   "Ghana": {
+    "pesticides": [
+     65.8,
+     1575.5
+    ],
+    "temperature": [
+     26.47,
+     27.57
+    ]
+   },
+   "Greece": {
+    "pesticides": [
+     3404.4,
+     12083.0
+    ],
+    "temperature": [
+     17.07,
+     19.36
+    ]
+   },
+   "Guatemala": {
+    "pesticides": [
+     9665.14,
+     22883.17
+    ],
+    "temperature": [
+     19.44,
+     20.37
+    ]
+   },
+   "Guinea": {
+    "pesticides": [
+     21.0,
+     877.19
+    ],
+    "temperature": [
+     27.02,
+     27.8
+    ]
+   },
+   "Guyana": {
+    "pesticides": [
+     211.83,
+     427.73
+    ],
+    "temperature": [
+     26.95,
+     27.87
+    ]
+   },
+   "Haiti": {
+    "pesticides": [
+     6.96,
+     27.85
+    ],
+    "temperature": [
+     26.76,
+     27.74
+    ]
+   },
+   "Honduras": {
+    "pesticides": [
+     1141.0,
+     9904.59
+    ],
+    "temperature": [
+     24.25,
+     25.37
+    ]
+   },
+   "Hungary": {
+    "pesticides": [
+     4151.0,
+     12756.0
+    ],
+    "temperature": [
+     9.44,
+     12.44
+    ]
+   },
+   "India": {
+    "pesticides": [
+     14485.33,
+     75000.0
+    ],
+    "temperature": [
+     25.35,
+     26.75
+    ]
+   },
+   "Indonesia": {
+    "pesticides": [
+     825.0,
+     3259.0
+    ],
+    "temperature": [
+     26.68,
+     27.34
+    ]
+   },
+   "Iraq": {
+    "pesticides": [
+     508.0,
+     2162.6
+    ],
+    "temperature": [
+     19.64,
+     23.73
+    ]
+   },
+   "Ireland": {
+    "pesticides": [
+     1577.0,
+     3664.3
+    ],
+    "temperature": [
+     8.38,
+     10.11
+    ]
+   },
+   "Italy": {
+    "pesticides": [
+     55633.0,
+     100596.4
+    ],
+    "temperature": [
+     9.67,
+     11.07
+    ]
+   },
+   "Jamaica": {
+    "pesticides": [
+     909.71,
+     1573.58
+    ],
+    "temperature": [
+     26.96,
+     27.8
+    ]
+   },
+   "Japan": {
+    "pesticides": [
+     51796.3,
+     79821.18
+    ],
+    "temperature": [
+     14.05,
+     15.63
+    ]
+   },
+   "Kazakhstan": {
+    "pesticides": [
+     3007.26,
+     17182.0
+    ],
+    "temperature": [
+     3.57,
+     7.1
+    ]
+   },
+   "Kenya": {
+    "pesticides": [
+     1578.0,
+     6344.0
+    ],
+    "temperature": [
+     15.94,
+     17.3
+    ]
+   },
+   "Latvia": {
+    "pesticides": [
+     284.72,
+     1396.96
+    ],
+    "temperature": [
+     4.9,
+     7.67
+    ]
+   },
+   "Lebanon": {
+    "pesticides": [
+     1221.0,
+     1816.0
+    ],
+    "temperature": [
+     18.18,
+     21.26
+    ]
+   },
+   "Lesotho": {
+    "pesticides": [
+     0.3,
+     271.84
+    ],
+    "temperature": [
+     13.93,
+     15.34
+    ]
+   },
+   "Libya": {
+    "pesticides": [
+     87.0,
+     8314.0
+    ],
+    "temperature": [
+     19.21,
+     20.84
+    ]
+   },
+   "Lithuania": {
+    "pesticides": [
+     688.06,
+     2748.8
+    ],
+    "temperature": [
+     5.09,
+     7.84
+    ]
+   },
+   "Madagascar": {
+    "pesticides": [
+     49.52,
+     507.94
+    ],
+    "temperature": [
+     19.34,
+     20.33
+    ]
+   },
+   "Malawi": {
+    "pesticides": [
+     48.28,
+     1500.27
+    ],
+    "temperature": [
+     19.68,
+     21.37
+    ]
+   },
+   "Malaysia": {
+    "pesticides": [
+     39406.48,
+     61445.6
+    ],
+    "temperature": [
+     26.95,
+     27.89
+    ]
+   },
+   "Mali": {
+    "pesticides": [
+     1.52,
+     95.7
+    ],
+    "temperature": [
+     27.05,
+     28.53
+    ]
+   },
+   "Mauritania": {
+    "pesticides": [
+     1.1,
+     702.5
+    ],
+    "temperature": [
+     27.23,
+     28.7
+    ]
+   },
+   "Mauritius": {
+    "pesticides": [
+     486.72,
+     889.0
+    ],
+    "temperature": [
+     23.81,
+     24.67
+    ]
+   },
+   "Mexico": {
+    "pesticides": [
+     16189.88,
+     65961.1
+    ],
+    "temperature": [
+     19.99,
+     21.34
+    ]
+   },
+   "Montenegro": {
+    "pesticides": [
+     0.55,
+     82.0
+    ],
+    "temperature": [
+     10.56,
+     12.87
+    ]
+   },
+   "Morocco": {
+    "pesticides": [
+     9364.0,
+     15064.0
+    ],
+    "temperature": [
+     17.02,
+     18.85
+    ]
+   },
+   "Mozambique": {
+    "pesticides": [
+     17.4,
+     1187.1
+    ],
+    "temperature": [
+     21.35,
+     22.6
+    ]
+   },
+   "Namibia": {
+    "pesticides": [
+     39.0,
+     56.0
+    ],
+    "temperature": [
+     19.26,
+     21.01
+    ]
+   },
+   "Nepal": {
+    "pesticides": [
+     60.11,
+     454.53
+    ],
+    "temperature": [
+     14.5,
+     15.96
+    ]
+   },
+   "Netherlands": {
+    "pesticides": [
+     8646.0,
+     12601.0
+    ],
+    "temperature": [
+     8.32,
+     11.04
+    ]
+   },
+   "New Zealand": {
+    "pesticides": [
+     2535.3,
+     5857.0
+    ],
+    "temperature": [
+     12.14,
+     13.97
+    ]
+   },
+   "Nicaragua": {
+    "pesticides": [
+     575.0,
+     12242.19
+    ],
+    "temperature": [
+     26.73,
+     27.83
+    ]
+   },
+   "Niger": {
+    "pesticides": [
+     7.32,
+     62.0
+    ],
+    "temperature": [
+     28.99,
+     30.42
+    ]
+   },
+   "Norway": {
+    "pesticides": [
+     348.24,
+     1183.0
+    ],
+    "temperature": [
+     1.3,
+     4.55
+    ]
+   },
+   "Pakistan": {
+    "pesticides": [
+     0.92,
+     27885.0
+    ],
+    "temperature": [
+     23.43,
+     25.24
+    ]
+   },
+   "Papua New Guinea": {
+    "pesticides": [
+     105.0,
+     176.0
+    ],
+    "temperature": [
+     24.86,
+     26.05
+    ]
+   },
+   "Peru": {
+    "pesticides": [
+     3134.0,
+     18885.82
+    ],
+    "temperature": [
+     16.45,
+     18.62
+    ]
+   },
+   "Poland": {
+    "pesticides": [
+     5422.0,
+     22204.46
+    ],
+    "temperature": [
+     6.71,
+     9.56
+    ]
+   },
+   "Portugal": {
+    "pesticides": [
+     6117.0,
+     17452.0
+    ],
+    "temperature": [
+     15.33,
+     17.23
+    ]
+   },
+   "Qatar": {
+    "pesticides": [
+     3.0,
+     68.0
+    ],
+    "temperature": [
+     26.22,
+     28.93
+    ]
+   },
+   "Romania": {
+    "pesticides": [
+     6314.0,
+     25255.0
+    ],
+    "temperature": [
+     10.46,
+     13.94
+    ]
+   },
+   "Rwanda": {
+    "pesticides": [
+     72.0,
+     1841.5
+    ],
+    "temperature": [
+     19.22,
+     20.29
+    ]
+   },
+   "Saudi Arabia": {
+    "pesticides": [
+     994.0,
+     5412.5
+    ],
+    "temperature": [
+     24.55,
+     27.68
+    ]
+   },
+   "Senegal": {
+    "pesticides": [
+     282.02,
+     787.83
+    ],
+    "temperature": [
+     24.7,
+     26.1
+    ]
+   },
+   "Slovenia": {
+    "pesticides": [
+     917.49,
+     1557.98
+    ],
+    "temperature": [
+     9.24,
+     11.58
+    ]
+   },
+   "South Africa": {
+    "pesticides": [
+     16582.0,
+     26857.0
+    ],
+    "temperature": [
+     17.32,
+     18.61
+    ]
+   },
+   "Spain": {
+    "pesticides": [
+     27852.0,
+     54197.0
+    ],
+    "temperature": [
+     14.6,
+     16.39
+    ]
+   },
+   "Sri Lanka": {
+    "pesticides": [
+     1112.8,
+     2144.31
+    ],
+    "temperature": [
+     26.26,
+     27.13
+    ]
+   },
+   "Sudan": {
+    "pesticides": [
+     2469.47,
+     2469.47
+    ],
+    "temperature": [
+     28.19,
+     28.74
+    ]
+   },
+   "Suriname": {
+    "pesticides": [
+     139.0,
+     2191.37
+    ],
+    "temperature": [
+     26.82,
+     27.7
+    ]
+   },
+   "Sweden": {
+    "pesticides": [
+     1225.0,
+     2352.0
+    ],
+    "temperature": [
+     6.01,
+     8.49
+    ]
+   },
+   "Switzerland": {
+    "pesticides": [
+     1359.04,
+     2282.0
+    ],
+    "temperature": [
+     6.66,
+     8.78
+    ]
+   },
+   "Tajikistan": {
+    "pesticides": [
+     54.0,
+     2280.0
+    ],
+    "temperature": [
+     7.29,
+     10.1
+    ]
+   },
+   "Thailand": {
+    "pesticides": [
+     8136.0,
+     88548.0
+    ],
+    "temperature": [
+     27.34,
+     28.98
+    ]
+   },
+   "Tunisia": {
+    "pesticides": [
+     422.24,
+     909.0
+    ],
+    "temperature": [
+     18.41,
+     20.12
+    ]
+   },
+   "Turkey": {
+    "pesticides": [
+     24219.0,
+     48715.51
+    ],
+    "temperature": [
+     13.49,
+     16.59
+    ]
+   },
+   "Uganda": {
+    "pesticides": [
+     59.0,
+     88.0
+    ],
+    "temperature": [
+     23.3,
+     24.29
+    ]
+   },
+   "Ukraine": {
+    "pesticides": [
+     15344.4,
+     90814.8
+    ],
+    "temperature": [
+     6.89,
+     10.33
+    ]
+   },
+   "United Kingdom": {
+    "pesticides": [
+     16401.66,
+     35579.0
+    ],
+    "temperature": [
+     8.56,
+     10.28
+    ]
+   },
+   "Uruguay": {
+    "pesticides": [
+     1634.02,
+     23506.4
+    ],
+    "temperature": [
+     15.92,
+     17.61
+    ]
+   },
+   "Zambia": {
+    "pesticides": [
+     716.0,
+     1670.0
+    ],
+    "temperature": [
+     20.14,
+     21.97
+    ]
+   },
+   "Zimbabwe": {
+    "pesticides": [
+     1664.0,
+     6753.0
+    ],
+    "temperature": [
+     19.76,
+     21.93
+    ]
+   }
+  },
+  "ranges": {
+   "rainfall": [
+    51.0,
+    3240.0
+   ],
+   "pesticides": [
+    0.04,
+    367778.0
+   ],
+   "temperature": [
+    1.3,
+    30.42
+   ]
+  },
+  "kenya_history": {
+   "Cassava": [
+    [
+     1990.0,
+     10.85
+    ],
+    [
+     1991.0,
+     10.0
+    ],
+    [
+     1992.0,
+     10.246
+    ],
+    [
+     1993.0,
+     10.294
+    ],
+    [
+     1994.0,
+     9.13
+    ],
+    [
+     1995.0,
+     9.556
+    ],
+    [
+     1996.0,
+     11.134
+    ],
+    [
+     1997.0,
+     9.494
+    ],
+    [
+     1998.0,
+     8.057
+    ],
+    [
+     1999.0,
+     10.211
+    ],
+    [
+     2000.0,
+     6.945
+    ],
+    [
+     2001.0,
+     7.768
+    ],
+    [
+     2002.0,
+     7.344
+    ],
+    [
+     2004.0,
+     11.1
+    ],
+    [
+     2005.0,
+     9.101
+    ],
+    [
+     2006.0,
+     9.586
+    ],
+    [
+     2007.0,
+     7.418
+    ],
+    [
+     2008.0,
+     13.736
+    ],
+    [
+     2009.0,
+     11.643
+    ],
+    [
+     2010.0,
+     5.252
+    ],
+    [
+     2011.0,
+     11.231
+    ],
+    [
+     2012.0,
+     12.727
+    ],
+    [
+     2013.0,
+     14.247
+    ]
+   ],
+   "Maize": [
+    [
+     1990.0,
+     1.659
+    ],
+    [
+     1991.0,
+     1.832
+    ],
+    [
+     1992.0,
+     1.727
+    ],
+    [
+     1993.0,
+     1.555
+    ],
+    [
+     1994.0,
+     2.04
+    ],
+    [
+     1995.0,
+     1.876
+    ],
+    [
+     1996.0,
+     1.451
+    ],
+    [
+     1997.0,
+     1.471
+    ],
+    [
+     1998.0,
+     1.67
+    ],
+    [
+     1999.0,
+     1.482
+    ],
+    [
+     2000.0,
+     1.44
+    ],
+    [
+     2001.0,
+     1.701
+    ],
+    [
+     2002.0,
+     1.513
+    ],
+    [
+     2004.0,
+     1.929
+    ],
+    [
+     2005.0,
+     1.64
+    ],
+    [
+     2006.0,
+     1.72
+    ],
+    [
+     2007.0,
+     1.813
+    ],
+    [
+     2008.0,
+     1.392
+    ],
+    [
+     2009.0,
+     1.294
+    ],
+    [
+     2010.0,
+     1.725
+    ],
+    [
+     2011.0,
+     1.584
+    ],
+    [
+     2012.0,
+     1.737
+    ],
+    [
+     2013.0,
+     1.692
+    ]
+   ],
+   "Plantains and others": [
+    [
+     1990.0,
+     12.5
+    ],
+    [
+     1991.0,
+     12.5
+    ],
+    [
+     1992.0,
+     12.5
+    ],
+    [
+     1993.0,
+     12.353
+    ],
+    [
+     1994.0,
+     12.5
+    ],
+    [
+     1995.0,
+     12.5
+    ],
+    [
+     1996.0,
+     12.308
+    ],
+    [
+     1997.0,
+     12.273
+    ],
+    [
+     1998.0,
+     12.609
+    ],
+    [
+     1999.0,
+     12.727
+    ],
+    [
+     2000.0,
+     12.857
+    ],
+    [
+     2001.0,
+     12.174
+    ],
+    [
+     2002.0,
+     12.174
+    ],
+    [
+     2004.0,
+     12.381
+    ],
+    [
+     2005.0,
+     12.381
+    ],
+    [
+     2006.0,
+     12.174
+    ],
+    [
+     2007.0,
+     12.381
+    ],
+    [
+     2008.0,
+     12.4
+    ],
+    [
+     2009.0,
+     12.308
+    ],
+    [
+     2010.0,
+     12.5
+    ],
+    [
+     2011.0,
+     12.4
+    ],
+    [
+     2012.0,
+     12.0
+    ],
+    [
+     2013.0,
+     11.923
+    ]
+   ],
+   "Potatoes": [
+    [
+     1990.0,
+     8.866
+    ],
+    [
+     1991.0,
+     11.336
+    ],
+    [
+     1992.0,
+     9.298
+    ],
+    [
+     1993.0,
+     11.749
+    ],
+    [
+     1994.0,
+     9.711
+    ],
+    [
+     1995.0,
+     9.658
+    ],
+    [
+     1996.0,
+     7.592
+    ],
+    [
+     1997.0,
+     7.042
+    ],
+    [
+     1998.0,
+     7.518
+    ],
+    [
+     1999.0,
+     9.141
+    ],
+    [
+     2000.0,
+     6.177
+    ],
+    [
+     2001.0,
+     9.16
+    ],
+    [
+     2002.0,
+     7.711
+    ],
+    [
+     2004.0,
+     8.44
+    ],
+    [
+     2005.0,
+     20.0
+    ],
+    [
+     2006.0,
+     20.0
+    ],
+    [
+     2007.0,
+     20.0
+    ],
+    [
+     2008.0,
+     21.482
+    ],
+    [
+     2009.0,
+     19.12
+    ],
+    [
+     2010.0,
+     22.428
+    ],
+    [
+     2011.0,
+     19.169
+    ],
+    [
+     2012.0,
+     20.339
+    ],
+    [
+     2013.0,
+     14.426
+    ]
+   ],
+   "Rice, paddy": [
+    [
+     1990.0,
+     3.098
+    ],
+    [
+     1991.0,
+     3.885
+    ],
+    [
+     1992.0,
+     3.536
+    ],
+    [
+     1993.0,
+     4.148
+    ],
+    [
+     1994.0,
+     4.356
+    ],
+    [
+     1995.0,
+     4.0
+    ],
+    [
+     1996.0,
+     4.0
+    ],
+    [
+     1997.0,
+     3.972
+    ],
+    [
+     1998.0,
+     4.842
+    ],
+    [
+     1999.0,
+     3.984
+    ],
+    [
+     2000.0,
+     3.771
+    ],
+    [
+     2001.0,
+     3.409
+    ],
+    [
+     2002.0,
+     3.462
+    ],
+    [
+     2004.0,
+     3.728
+    ],
+    [
+     2005.0,
+     3.932
+    ],
+    [
+     2006.0,
+     2.806
+    ],
+    [
+     2007.0,
+     2.872
+    ],
+    [
+     2008.0,
+     1.308
+    ],
+    [
+     2009.0,
+     1.933
+    ],
+    [
+     2010.0,
+     4.238
+    ],
+    [
+     2011.0,
+     3.968
+    ],
+    [
+     2012.0,
+     4.664
+    ],
+    [
+     2013.0,
+     3.996
+    ]
+   ],
+   "Sorghum": [
+    [
+     1990.0,
+     0.847
+    ],
+    [
+     1991.0,
+     0.957
+    ],
+    [
+     1992.0,
+     1.122
+    ],
+    [
+     1993.0,
+     0.745
+    ],
+    [
+     1994.0,
+     0.864
+    ],
+    [
+     1995.0,
+     0.598
+    ],
+    [
+     1996.0,
+     0.595
+    ],
+    [
+     1997.0,
+     0.745
+    ],
+    [
+     1998.0,
+     0.753
+    ],
+    [
+     1999.0,
+     0.778
+    ],
+    [
+     2000.0,
+     0.666
+    ],
+    [
+     2001.0,
+     0.857
+    ],
+    [
+     2002.0,
+     0.801
+    ],
+    [
+     2004.0,
+     0.564
+    ],
+    [
+     2005.0,
+     1.223
+    ],
+    [
+     2006.0,
+     0.801
+    ],
+    [
+     2007.0,
+     0.947
+    ],
+    [
+     2008.0,
+     0.522
+    ],
+    [
+     2009.0,
+     0.572
+    ],
+    [
+     2010.0,
+     0.727
+    ],
+    [
+     2011.0,
+     0.629
+    ],
+    [
+     2012.0,
+     0.744
+    ],
+    [
+     2013.0,
+     0.755
+    ]
+   ],
+   "Soybeans": [
+    [
+     1990.0,
+     0.8
+    ],
+    [
+     1991.0,
+     0.804
+    ],
+    [
+     1992.0,
+     0.806
+    ],
+    [
+     1993.0,
+     0.808
+    ],
+    [
+     1994.0,
+     0.81
+    ],
+    [
+     1995.0,
+     0.813
+    ],
+    [
+     1996.0,
+     0.815
+    ],
+    [
+     1997.0,
+     0.818
+    ],
+    [
+     1998.0,
+     0.82
+    ],
+    [
+     1999.0,
+     0.823
+    ],
+    [
+     2000.0,
+     0.86
+    ],
+    [
+     2001.0,
+     0.861
+    ],
+    [
+     2002.0,
+     0.861
+    ],
+    [
+     2004.0,
+     0.861
+    ],
+    [
+     2005.0,
+     0.859
+    ],
+    [
+     2006.0,
+     0.826
+    ],
+    [
+     2007.0,
+     0.84
+    ],
+    [
+     2008.0,
+     0.816
+    ],
+    [
+     2009.0,
+     0.715
+    ],
+    [
+     2010.0,
+     0.95
+    ],
+    [
+     2011.0,
+     1.258
+    ],
+    [
+     2012.0,
+     1.5
+    ],
+    [
+     2013.0,
+     1.223
+    ]
+   ],
+   "Sweet potatoes": [
+    [
+     1990.0,
+     9.915
+    ],
+    [
+     1991.0,
+     10.937
+    ],
+    [
+     1992.0,
+     6.753
+    ],
+    [
+     1993.0,
+     9.627
+    ],
+    [
+     1994.0,
+     10.44
+    ],
+    [
+     1995.0,
+     10.071
+    ],
+    [
+     1996.0,
+     7.988
+    ],
+    [
+     1997.0,
+     11.136
+    ],
+    [
+     1998.0,
+     8.059
+    ],
+    [
+     1999.0,
+     10.582
+    ],
+    [
+     2000.0,
+     8.838
+    ],
+    [
+     2001.0,
+     9.0
+    ],
+    [
+     2002.0,
+     8.5
+    ],
+    [
+     2004.0,
+     9.412
+    ],
+    [
+     2005.0,
+     10.958
+    ],
+    [
+     2006.0,
+     9.67
+    ],
+    [
+     2007.0,
+     13.28
+    ],
+    [
+     2008.0,
+     14.252
+    ],
+    [
+     2009.0,
+     13.29
+    ],
+    [
+     2010.0,
+     9.974
+    ],
+    [
+     2011.0,
+     12.269
+    ],
+    [
+     2012.0,
+     12.835
+    ],
+    [
+     2013.0,
+     12.471
+    ]
+   ],
+   "Wheat": [
+    [
+     1990.0,
+     1.655
+    ],
+    [
+     1991.0,
+     1.848
+    ],
+    [
+     1992.0,
+     1.936
+    ],
+    [
+     1993.0,
+     1.38
+    ],
+    [
+     1994.0,
+     2.216
+    ],
+    [
+     1995.0,
+     2.106
+    ],
+    [
+     1996.0,
+     2.011
+    ],
+    [
+     1997.0,
+     1.613
+    ],
+    [
+     1998.0,
+     1.895
+    ],
+    [
+     1999.0,
+     1.653
+    ],
+    [
+     2000.0,
+     1.549
+    ],
+    [
+     2001.0,
+     1.989
+    ],
+    [
+     2002.0,
+     2.122
+    ],
+    [
+     2004.0,
+     2.483
+    ],
+    [
+     2005.0,
+     2.313
+    ],
+    [
+     2006.0,
+     2.188
+    ],
+    [
+     2007.0,
+     3.094
+    ],
+    [
+     2008.0,
+     2.584
+    ],
+    [
+     2009.0,
+     1.666
+    ],
+    [
+     2010.0,
+     3.199
+    ],
+    [
+     2011.0,
+     2.042
+    ],
+    [
+     2012.0,
+     2.972
+    ],
+    [
+     2013.0,
+     2.76
+    ]
+   ],
+   "Yams": [
+    [
+     1990.0,
+     8.836
+    ],
+    [
+     1991.0,
+     8.0
+    ],
+    [
+     1992.0,
+     7.471
+    ],
+    [
+     1993.0,
+     6.749
+    ],
+    [
+     1994.0,
+     7.4
+    ],
+    [
+     1995.0,
+     6.983
+    ],
+    [
+     1996.0,
+     5.975
+    ],
+    [
+     1997.0,
+     5.718
+    ],
+    [
+     1998.0,
+     4.893
+    ],
+    [
+     1999.0,
+     9.232
+    ],
+    [
+     2000.0,
+     5.564
+    ],
+    [
+     2001.0,
+     7.898
+    ],
+    [
+     2002.0,
+     5.489
+    ],
+    [
+     2004.0,
+     8.352
+    ],
+    [
+     2005.0,
+     8.668
+    ],
+    [
+     2006.0,
+     9.502
+    ],
+    [
+     2007.0,
+     7.465
+    ],
+    [
+     2008.0,
+     7.587
+    ],
+    [
+     2009.0,
+     4.517
+    ],
+    [
+     2010.0,
+     6.564
+    ],
+    [
+     2011.0,
+     9.115
+    ],
+    [
+     2012.0,
+     11.605
+    ],
+    [
+     2013.0,
+     13.596
+    ]
+   ]
+  },
+  "metrics": {
+   "R2": 0.931,
+   "RMSE": 2.286,
+   "MAE": 1.166,
+   "Kenya RMSE": 1.893,
+   "Baseline RMSE": 8.828,
+   "deployed": {
+    "Test R2": 0.929,
+    "Test RMSE": 2.334,
+    "Kenya RMSE": 1.842
+   }
+  },
+  "best_params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 1,
+   "max_features": 1.0
+  },
+  "deploy_params": {
+   "n_estimators": 30,
+   "min_samples_leaf": 2,
+   "max_features": 1.0
+  },
+  "feature_importance": {
+   "Crop": 0.5427,
+   "Country": 0.1405,
+   "Pesticides": 0.113,
+   "Rainfall": 0.0933,
+   "Temperature": 0.084,
+   "Year": 0.0265
+  },
+  "model_comparison": [
+   {
+    "Model": "Baseline (mean yield)",
+    "Validation R2": -0.012,
+    "Validation RMSE (t/ha)": 8.26
+   },
+   {
+    "Model": "Linear Regression",
+    "Validation R2": 0.727,
+    "Validation RMSE (t/ha)": 4.293
+   },
+   {
+    "Model": "KNN",
+    "Validation R2": 0.642,
+    "Validation RMSE (t/ha)": 4.915
+   },
+   {
+    "Model": "Decision Tree",
+    "Validation R2": 0.942,
+    "Validation RMSE (t/ha)": 1.976
+   },
+   {
+    "Model": "Random Forest",
+    "Validation R2": 0.952,
+    "Validation RMSE (t/ha)": 1.794
+   },
+   {
+    "Model": "Gradient Boosting",
+    "Validation R2": 0.796,
+    "Validation RMSE (t/ha)": 3.704
+   }
+  ]
+ }
+}
