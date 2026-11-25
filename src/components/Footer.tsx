@@ -30,9 +30,8 @@ export function Footer() {
         ))}
       </div>
       <div className="border-t border-leaf-100">
-        <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-2 px-5 py-4 text-xs text-leaf-900/50">
-          <span>© 2026 ShambaSmart. Recommendations are guidance and do not replace advice from a local agronomist.</span>
-          <span>Data: FAO and World Bank via Kaggle · Photos: Unsplash</span>
+        <div className="mx-auto max-w-6xl px-5 py-4 text-center text-xs text-leaf-900/50">
+          © 2026 ShambaSmart. All rights reserved.
         </div>
       </div>
     </footer>
