@@ -86,8 +86,8 @@ export default function HowItWorksPage() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <Card title="Typical Kenyan harvests, 1990–2013">
-          <Bars items={kenya} color="bg-leaf-600" format={(v) => `${v.toFixed(1)} t/ha`} />
+        <Card title="Typical Kenyan harvests, 1990–2013 (t/ha)">
+          <Bars items={kenya} color="bg-leaf-600" format={(v) => v.toFixed(1)} />
           <p className="mt-4 text-sm text-leaf-900/60">Median tonnes per hectare from national FAO records.</p>
         </Card>
         <div className="space-y-6">
