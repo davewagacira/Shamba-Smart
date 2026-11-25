@@ -128,11 +128,11 @@ export default function Home() {
   return (
     <div className="space-y-24 pb-8">
       {/* full-bleed hero */}
-      <section className="relative left-1/2 -mt-8 w-screen -translate-x-1/2 overflow-hidden">
+      <section id="hero" className="relative left-1/2 -mt-8 w-screen -translate-x-1/2 overflow-hidden">
         <ParallaxImage src={PHOTOS.hero.src} alt={PHOTOS.hero.alt} />
         <div className="absolute inset-0 bg-gradient-to-r from-leaf-900/90 via-leaf-900/65 to-leaf-900/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-leaf-900/50 to-transparent lg:hidden" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 sm:py-24 lg:grid-cols-[1.15fr_1fr] lg:py-28">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-20 pt-32 sm:pb-24 sm:pt-36 lg:grid-cols-[1.15fr_1fr] lg:pb-28 lg:pt-40">
           <Stagger onMount gap={0.12} className="text-white">
             <StaggerItem>
             <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-leaf-100 ring-1 ring-white/20">
