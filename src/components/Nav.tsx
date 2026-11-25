@@ -7,7 +7,8 @@ import { Logo } from "@/components/Logo";
 
 const LINKS = [
   { href: "/how-it-works", label: "How it works" },
-  { href: "/developers", label: "Developers" },
+  // hidden from the header for presentations; the page still exists at /developers
+  // { href: "/developers", label: "Developers" },
   { href: "/about", label: "About" },
 ];
 
