@@ -16,7 +16,6 @@ type Response = {
   recommendations: Rec[];
   all: { crop: string; probability: number }[];
   warnings: string[];
-  model: { inference_ms: number };
 };
 
 const FEATURES = meta.crop.features;
@@ -74,7 +73,7 @@ export function RecommendForm() {
         }}
       >
         <div className="mb-5">
-          <p className="text-xs font-medium uppercase tracking-wider text-leaf-900/50">Load a typical field</p>
+          <p className="text-xs font-medium uppercase tracking-wider text-leaf-900/50">Start from a typical field</p>
           <div className="mt-2 flex flex-wrap gap-2">
             {EXAMPLES.map((c) => (
               <button key={c} type="button" onClick={() => loadExample(c)}
@@ -119,7 +118,7 @@ export function RecommendForm() {
         </div>
         <button type="submit" disabled={loading}
           className="mt-6 w-full rounded-full bg-leaf-700 py-3 font-medium text-white hover:bg-leaf-800 disabled:opacity-60">
-          {loading ? "Analysing…" : "Recommend crops"}
+          {loading ? "Analysing your field…" : "Get recommendation"}
         </button>
         {error && <p className="mt-3 text-sm text-red-700">{error}</p>}
       </form>
@@ -127,31 +126,30 @@ export function RecommendForm() {
       <section className="space-y-5">
         {!result && (
           <div className="flex h-full min-h-64 items-center justify-center rounded-3xl border-2 border-dashed border-leaf-200 p-8 text-center text-leaf-900/50">
-            Your recommendations will appear here.
+            Enter your field details and select “Get recommendation” to see the crops that suit your land.
           </div>
         )}
         {result && top && (
           <>
             <div className="rounded-3xl bg-leaf-800 p-6 text-white shadow-sm">
-              <p className="text-sm text-leaf-200">Best match</p>
+              <p className="text-sm text-leaf-200">Best crop for your field</p>
               <h2 className="mt-1 text-4xl font-semibold">
                 {top.name}
                 {top.swahili && <span className="ml-3 text-xl font-normal text-leaf-200">{top.swahili}</span>}
               </h2>
-              <p className="mt-2 text-leaf-100">{(top.probability * 100).toFixed(1)}% of the forest&apos;s trees vote for this crop</p>
+              <p className="mt-2 text-leaf-100">{(top.probability * 100).toFixed(0)}% confidence</p>
               {result.recommendations.slice(1).every((r) => r.probability < 0.01) && (
-                <p className="mt-4 text-sm text-leaf-200">No other crop comes close for these conditions.</p>
+                <p className="mt-4 text-sm text-leaf-200">Your field is a strong match for this crop; no other crop comes close.</p>
               )}
               <div className="mt-5 grid grid-cols-2 gap-3">
                 {result.recommendations.slice(1).filter((r) => r.probability >= 0.01).map((r, i) => (
                   <div key={r.crop} className="rounded-2xl bg-white/10 p-3">
-                    <p className="text-xs text-leaf-200">Option {i + 2}</p>
+                    <p className="text-xs text-leaf-200">Alternative {i + 1}</p>
                     <p className="font-semibold">{r.name}</p>
                     <p className="text-sm text-leaf-100">{(r.probability * 100).toFixed(1)}%</p>
                   </div>
                 ))}
               </div>
-              <p className="mt-4 text-xs text-leaf-200/80">Answered in {result.model.inference_ms} ms by the ONNX model</p>
             </div>
 
             {result.warnings.length > 0 && (
@@ -161,10 +159,10 @@ export function RecommendForm() {
             )}
 
             <div className="rounded-3xl border border-leaf-100 bg-white p-6 shadow-sm">
-              <h3 className="font-semibold text-leaf-900">Your field vs typical {top.name.toLowerCase()} conditions</h3>
+              <h3 className="font-semibold text-leaf-900">Your field compared with ideal {top.name.toLowerCase()} conditions</h3>
               <table className="mt-3 w-full text-sm">
                 <thead className="text-left text-xs text-leaf-900/50">
-                  <tr><th className="py-1">Factor</th><th>Yours</th><th>Typical range</th><th></th></tr>
+                  <tr><th className="py-1">Factor</th><th>Your field</th><th>Ideal range</th><th></th></tr>
                 </thead>
                 <tbody>
                   {FEATURES.map((f) => {
@@ -179,7 +177,7 @@ export function RecommendForm() {
                         <td>
                           <span className={`rounded-full px-2 py-0.5 text-xs ${
                             status === "ok" ? "bg-leaf-100 text-leaf-800" : "bg-soil-100 text-soil-700"}`}>
-                            {status === "ok" ? "Good" : status === "low" ? "Low" : "High"}
+                            {status === "ok" ? "Ideal" : status === "low" ? "Low" : "High"}
                           </span>
                         </td>
                       </tr>
@@ -195,17 +193,20 @@ export function RecommendForm() {
                   return values[f] < lo ? [a[0]] : values[f] > hi ? [a[1]] : [];
                 });
                 return tips.length > 0 ? (
-                  <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-leaf-900/75">
-                    {tips.map((t) => <li key={t}>{t}</li>)}
-                  </ul>
+                  <div className="mt-4 rounded-2xl bg-soil-100 p-4">
+                    <p className="text-sm font-semibold text-soil-700">Recommended actions</p>
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-sm text-leaf-900/80">
+                      {tips.map((t) => <li key={t}>{t}</li>)}
+                    </ul>
+                  </div>
                 ) : (
-                  <p className="mt-4 text-sm text-leaf-700">Your soil and climate are within the usual range for this crop.</p>
+                  <p className="mt-4 text-sm text-leaf-700">Your soil and climate are within the ideal range for this crop.</p>
                 );
               })()}
             </div>
 
             <div className="rounded-3xl border border-leaf-100 bg-white p-6 shadow-sm">
-              <h3 className="mb-3 font-semibold text-leaf-900">Model confidence across crops</h3>
+              <h3 className="mb-3 font-semibold text-leaf-900">How well other crops suit your field</h3>
               <Bars
                 items={result.all.filter((r) => r.probability >= 0.01).slice(0, 8).map((r) => ({ label: cropName(r.crop), value: r.probability }))}
                 max={1}

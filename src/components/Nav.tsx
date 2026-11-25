@@ -5,9 +5,10 @@ import { usePathname } from "next/navigation";
 import { Logo } from "@/components/Logo";
 
 const LINKS = [
-  { href: "/recommend", label: "Recommend a crop" },
-  { href: "/yield", label: "Predict yield" },
-  { href: "/insights", label: "Insights" },
+  { href: "/crop-advisor", label: "Crop Advisor" },
+  { href: "/yield-forecast", label: "Yield Forecast" },
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/developers", label: "Developers" },
   { href: "/about", label: "About" },
 ];
 
@@ -20,18 +21,21 @@ export function Nav() {
           <Logo />
           <span className="text-lg tracking-tight">ShambaSmart</span>
         </Link>
-        <div className="ml-auto flex flex-wrap gap-1 text-sm">
+        <div className="ml-auto flex flex-wrap items-center gap-1 text-sm">
           {LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               className={`rounded-full px-3 py-1.5 transition ${
-                path === l.href ? "bg-leaf-700 text-white" : "text-leaf-900 hover:bg-leaf-100"
+                path === l.href ? "bg-leaf-100 font-medium text-leaf-900" : "text-leaf-900/80 hover:bg-leaf-50 hover:text-leaf-900"
               }`}
             >
               {l.label}
             </Link>
           ))}
+          <Link href="/crop-advisor" className="ml-2 hidden rounded-full bg-leaf-700 px-4 py-1.5 font-medium text-white hover:bg-leaf-800 sm:inline-block">
+            Get started
+          </Link>
         </div>
       </nav>
     </header>

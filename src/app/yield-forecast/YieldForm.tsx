@@ -27,7 +27,6 @@ export function YieldForm() {
   const [pred, setPred] = useState<Prediction | null>(null);
   const [byCrop, setByCrop] = useState<{ label: string; value: number }[]>([]);
   const [warnings, setWarnings] = useState<string[]>([]);
-  const [ms, setMs] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   // debounce so sliding does not flood the API
@@ -40,7 +39,6 @@ export function YieldForm() {
         ]);
         setPred(one);
         setWarnings(one.warnings);
-        setMs(one.model.inference_ms);
         setByCrop(
           all.predictions
             .map((p: Prediction) => ({ label: p.crop, value: p.yield_t_ha }))
@@ -93,14 +91,14 @@ export function YieldForm() {
           Reset to {s.country}&apos;s {LAST_YEAR} values
         </button>
         <p className="text-xs text-leaf-900/50">
-          Figures are national averages, as in the FAO training data. Rainfall is one fixed long-term value per country,
-          so it is not a slider; temperature and pesticide sliders stay near the values the country actually recorded.
+          Conditions are national averages. Rainfall is the country&apos;s long-term average, and the other settings stay
+          within the range the country has recorded, so forecasts remain realistic.
         </p>
       </div>
 
       <section className="space-y-5">
         <div className="rounded-3xl bg-soil-100 p-6 shadow-sm">
-          <p className="text-sm text-soil-700">Predicted {s.crop.toLowerCase()} yield in {s.country}, {s.year}</p>
+          <p className="text-sm text-soil-700">Expected {s.crop.toLowerCase()} harvest in {s.country}, {s.year}</p>
           {pred ? (
             <>
               <p className="mt-1 text-5xl font-semibold text-leaf-900 tabular-nums">
@@ -119,30 +117,30 @@ export function YieldForm() {
                 )}
               </div>
               <p className="mt-3 text-xs text-soil-700/80">
-                Typical error ±{Y.metrics.MAE.toFixed(1)} t/ha · answered in {ms} ms by the ONNX model
+                Forecasts are usually within ±{Y.metrics.MAE.toFixed(1)} t/ha of the recorded harvest.
               </p>
             </>
           ) : (
-            <p className="mt-2 text-leaf-900/50">Calculating…</p>
+            <p className="mt-2 text-leaf-900/50">Preparing your forecast…</p>
           )}
           {error && <p className="mt-2 text-sm text-red-700">{error}</p>}
           {warnings.map((w) => <p key={w} className="mt-2 text-xs text-soil-700">{w}</p>)}
         </div>
 
         <div className="rounded-3xl border border-leaf-100 bg-white p-6 shadow-sm">
-          <h3 className="font-semibold text-leaf-900">Which crop yields most in {s.country}?</h3>
+          <h3 className="font-semibold text-leaf-900">Compare crops in {s.country}</h3>
           <p className="mb-4 text-sm text-leaf-900/60">
-            Predicted t/ha for every crop under the same conditions. Roots and tubers are weighed fresh, so they weigh more than grains.
+            Expected tonnes per hectare for each crop under the same conditions. Roots and tubers are weighed fresh, so they weigh more than grains.
           </p>
           <Bars items={byCrop} format={(v) => v.toFixed(1)} color="bg-leaf-500" />
         </div>
 
         {s.country === "Kenya" && (
           <div className="rounded-3xl border border-leaf-100 bg-white p-6 shadow-sm">
-            <h3 className="font-semibold text-leaf-900">Kenya&apos;s recorded {s.crop.toLowerCase()} yields</h3>
+            <h3 className="font-semibold text-leaf-900">Kenya&apos;s {s.crop.toLowerCase()} harvests, 1990–2013</h3>
             {history ? (
               <LineChart
-                series={[{ name: "Actual (FAO)", color: "#a8743f", points: history }]}
+                series={[{ name: "Recorded harvest", color: "#a8743f", points: history }]}
                 marker={pred && s.year <= LAST_YEAR ? { x: s.year, y: pred.yield_t_ha } : undefined}
                 xLabel="Year"
                 yLabel="Yield (t/ha)"

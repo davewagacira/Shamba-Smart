@@ -2,25 +2,31 @@ import Link from "next/link";
 import { meta } from "@/lib/meta";
 
 const stats = [
-  { value: `${(meta.crop.metrics.test_accuracy * 100).toFixed(1)}%`, label: "crop recommendation accuracy on unseen fields" },
-  { value: meta.yield.metrics.deployed["Test R2"].toFixed(2), label: "R² for yield on unseen years (2009–2013)" },
-  { value: `${meta.crop.classes.length}`, label: "crops the recommender knows" },
-  { value: `${meta.yield.countries.length}`, label: "countries in the yield model, Kenya included" },
+  { value: `${(meta.crop.metrics.test_accuracy * 100).toFixed(1)}%`, label: "of test fields matched to the right crop" },
+  { value: `±${meta.yield.metrics.MAE.toFixed(1)} t/ha`, label: "typical margin on harvest forecasts" },
+  { value: `${meta.crop.classes.length}`, label: "crops covered, from maize to coffee" },
+  { value: "24 yrs", label: "of harvest records from 101 countries" },
 ];
 
 const steps = [
-  { title: "Describe your shamba", text: "Soil test results (N, P, K, pH) and your local climate, or your country, crop and season." },
-  { title: "Models run instantly", text: "Two Random Forest models, trained in Python and exported to ONNX, run on our Node.js server." },
-  { title: "Act on the answer", text: "See the best crops with confidence scores, how your soil compares, and the harvest to expect." },
+  { title: "Tell us about your shamba", text: "Enter your soil test results and local climate, or choose your country and crop." },
+  { title: "We analyse it instantly", text: "Our models compare your field with thousands of real fields and harvests." },
+  { title: "Plan with confidence", text: "Get the best crops for your land, what to fix in your soil, and the harvest to expect." },
+];
+
+const audiences = [
+  { title: "Farmers", text: "Decide what to plant before buying seed, and know roughly how many bags to expect." },
+  { title: "Extension officers", text: "Give quick, consistent advice in the field from a soil test and a phone." },
+  { title: "Agri-lenders and co-ops", text: "Estimate expected harvests when planning input loans and collections." },
 ];
 
 export default function Home() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-20">
       <section className="grid items-center gap-10 pt-6 md:grid-cols-[1.2fr_1fr]">
         <div>
-          <p className="mb-3 inline-block rounded-full bg-leaf-100 px-3 py-1 text-xs font-medium text-leaf-800">
-            Machine learning for smallholder farmers
+          <p className="mb-4 inline-block rounded-full bg-leaf-100 px-3 py-1 text-xs font-medium text-leaf-800">
+            Smart planning for Kenyan agriculture
           </p>
           <h1 className="text-4xl font-semibold leading-tight tracking-tight text-leaf-900 md:text-5xl">
             Plant the right crop.
@@ -28,15 +34,15 @@ export default function Home() {
             <span className="text-leaf-600">Know your harvest.</span>
           </h1>
           <p className="mt-5 max-w-xl text-lg text-leaf-900/75">
-            Most Kenyan farmers choose crops by habit, not by their soil and climate. ShambaSmart uses machine learning
-            to recommend the crops that suit a field and to predict how many tonnes per hectare it should give.
+            ShambaSmart reads your soil test and local climate to recommend the crops most likely to thrive, and
+            forecasts the harvest you can expect, in kilograms and bags per acre.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/recommend" className="rounded-full bg-leaf-700 px-5 py-3 font-medium text-white shadow-sm hover:bg-leaf-800">
-              What should I plant?
+            <Link href="/crop-advisor" className="rounded-full bg-leaf-700 px-5 py-3 font-medium text-white shadow-sm hover:bg-leaf-800">
+              Find the right crop
             </Link>
-            <Link href="/yield" className="rounded-full border border-leaf-700 px-5 py-3 font-medium text-leaf-800 hover:bg-leaf-50">
-              How much will I harvest?
+            <Link href="/yield-forecast" className="rounded-full border border-leaf-700 px-5 py-3 font-medium text-leaf-800 hover:bg-leaf-50">
+              Forecast my harvest
             </Link>
           </div>
         </div>
@@ -51,23 +57,23 @@ export default function Home() {
       </section>
 
       <section className="grid gap-5 md:grid-cols-2">
-        <Link href="/recommend" className="group rounded-3xl bg-leaf-800 p-7 text-white shadow-sm">
-          <p className="text-sm uppercase tracking-wider text-leaf-200">Classification</p>
-          <h2 className="mt-2 text-2xl font-semibold">Crop recommendation</h2>
+        <Link href="/crop-advisor" className="group rounded-3xl bg-leaf-800 p-7 text-white shadow-sm">
+          <p className="text-sm font-medium uppercase tracking-wider text-sun-400">Crop Advisor</p>
+          <h2 className="mt-2 text-2xl font-semibold">What should I plant?</h2>
           <p className="mt-3 text-leaf-100/85">
-            Enter soil nutrients, pH, temperature, humidity and rainfall. The model ranks 22 crops and explains how your
-            field compares with where each crop grows best.
+            Enter soil nutrients, pH, temperature, humidity and rainfall. Get the crops that best suit your field, how
+            your soil compares with what each crop needs, and what to fix.
           </p>
-          <span className="mt-5 inline-block text-sun-400 group-hover:underline">Try it →</span>
+          <span className="mt-5 inline-block text-sun-400 group-hover:underline">Open Crop Advisor →</span>
         </Link>
-        <Link href="/yield" className="group rounded-3xl bg-soil-100 p-7 shadow-sm">
-          <p className="text-sm uppercase tracking-wider text-soil-700">Regression</p>
-          <h2 className="mt-2 text-2xl font-semibold text-leaf-900">Yield prediction</h2>
+        <Link href="/yield-forecast" className="group rounded-3xl bg-soil-100 p-7 shadow-sm">
+          <p className="text-sm font-medium uppercase tracking-wider text-soil-700">Yield Forecast</p>
+          <h2 className="mt-2 text-2xl font-semibold text-leaf-900">How much will I harvest?</h2>
           <p className="mt-3 text-leaf-900/75">
-            Choose a country and crop, then move the temperature and pesticide sliders to see the predicted harvest
-            change in real time, in t/ha, kg per acre and 90 kg bags, and compare all crops side by side.
+            Choose your country and crop to see the expected harvest per hectare, per acre and in 90 kg bags, test
+            different conditions, and compare crops side by side.
           </p>
-          <span className="mt-5 inline-block text-soil-700 group-hover:underline">Try it →</span>
+          <span className="mt-5 inline-block text-soil-700 group-hover:underline">Open Yield Forecast →</span>
         </Link>
       </section>
 
@@ -82,6 +88,28 @@ export default function Home() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold text-leaf-900">Who it is for</h2>
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
+          {audiences.map((a) => (
+            <div key={a.title} className="rounded-2xl bg-leaf-50 p-5">
+              <h3 className="font-semibold text-leaf-900">{a.title}</h3>
+              <p className="mt-1 text-sm text-leaf-900/70">{a.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="flex flex-wrap items-center justify-between gap-5 rounded-3xl bg-leaf-900 px-8 py-10 text-white">
+        <div>
+          <h2 className="text-2xl font-semibold">Have a soil test result?</h2>
+          <p className="mt-1 text-leaf-100/80">Get a crop recommendation in seconds. No sign-up needed.</p>
+        </div>
+        <Link href="/crop-advisor" className="rounded-full bg-sun-400 px-6 py-3 font-medium text-leaf-900 hover:brightness-95">
+          Try the Crop Advisor
+        </Link>
       </section>
     </div>
   );
