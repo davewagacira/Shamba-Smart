@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Bars } from "@/components/Bars";
 import { LineChart } from "@/components/LineChart";
@@ -101,9 +102,18 @@ export function YieldForm() {
           <p className="text-sm text-soil-700">Expected {s.crop.toLowerCase()} harvest in {s.country}, {s.year}</p>
           {pred ? (
             <>
-              <p className="mt-1 text-5xl font-semibold text-leaf-900 tabular-nums">
-                {pred.yield_t_ha.toFixed(2)} <span className="text-2xl font-normal">t/ha</span>
-              </p>
+              <AnimatePresence mode="popLayout" initial={false}>
+                <motion.p
+                  key={pred.yield_t_ha.toFixed(2)}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.25 }}
+                  className="mt-1 text-5xl font-semibold text-leaf-900 tabular-nums"
+                >
+                  {pred.yield_t_ha.toFixed(2)} <span className="text-2xl font-normal">t/ha</span>
+                </motion.p>
+              </AnimatePresence>
               <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
                 <div className="rounded-2xl bg-white/70 p-3">
                   <p className="text-leaf-900/60">Per acre</p>

@@ -1,5 +1,5 @@
 import { recommendCrops } from "@/lib/inference";
-import { cropName, cropSwahili, meta } from "@/lib/meta";
+import { cropName, meta } from "@/lib/meta";
 import { parseCropInput } from "@/lib/validate";
 
 // POST { N, P, K, temperature, humidity, ph, rainfall } -> ranked crops
@@ -17,7 +17,6 @@ export async function POST(request: Request) {
     recommendations: ranked.slice(0, 3).map((r) => ({
       crop: r.crop,
       name: cropName(r.crop),
-      swahili: cropSwahili(r.crop) ?? null,
       probability: Number(r.probability.toFixed(4)),
       typical: meta.crop.crop_profiles[r.crop],
       typical_range: meta.crop.crop_iqr[r.crop],

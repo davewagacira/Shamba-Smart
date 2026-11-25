@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
+  // farm photography served from the Unsplash CDN
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com", pathname: "/**" }],
+  },
   partialPrefetching: true,
   // ship the ONNX models and the Linux onnxruntime binary (loaded by a dynamic path, so not auto-traced)
   outputFileTracingIncludes: {

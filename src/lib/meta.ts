@@ -49,33 +49,32 @@ export const FEATURE_INFO: Record<CropFeature, { label: string; unit: string; st
   rainfall: { label: "Rainfall", unit: "mm", step: 1, hint: "Rainfall during the growing season" },
 };
 
-const CROP_NAMES: Record<string, { name: string; sw?: string }> = {
-  apple: { name: "Apple", sw: "Tufaha" },
-  banana: { name: "Banana", sw: "Ndizi" },
+const CROP_NAMES: Record<string, { name: string }> = {
+  apple: { name: "Apple" },
+  banana: { name: "Banana" },
   blackgram: { name: "Black gram" },
   chickpea: { name: "Chickpea" },
-  coconut: { name: "Coconut", sw: "Nazi" },
-  coffee: { name: "Coffee", sw: "Kahawa" },
-  cotton: { name: "Cotton", sw: "Pamba" },
-  grapes: { name: "Grapes", sw: "Zabibu" },
+  coconut: { name: "Coconut" },
+  coffee: { name: "Coffee" },
+  cotton: { name: "Cotton" },
+  grapes: { name: "Grapes" },
   jute: { name: "Jute" },
-  kidneybeans: { name: "Kidney beans", sw: "Maharagwe" },
+  kidneybeans: { name: "Kidney beans" },
   lentil: { name: "Lentil" },
-  maize: { name: "Maize", sw: "Mahindi" },
-  mango: { name: "Mango", sw: "Embe" },
+  maize: { name: "Maize" },
+  mango: { name: "Mango" },
   mothbeans: { name: "Moth beans" },
-  mungbean: { name: "Green grams", sw: "Ndengu" },
+  mungbean: { name: "Green grams" },
   muskmelon: { name: "Muskmelon" },
-  orange: { name: "Orange", sw: "Chungwa" },
-  papaya: { name: "Papaya", sw: "Papai" },
-  pigeonpeas: { name: "Pigeon peas", sw: "Mbaazi" },
-  pomegranate: { name: "Pomegranate", sw: "Komamanga" },
-  rice: { name: "Rice", sw: "Mpunga" },
-  watermelon: { name: "Watermelon", sw: "Tikiti maji" },
+  orange: { name: "Orange" },
+  papaya: { name: "Papaya" },
+  pigeonpeas: { name: "Pigeon peas" },
+  pomegranate: { name: "Pomegranate" },
+  rice: { name: "Rice" },
+  watermelon: { name: "Watermelon" },
 };
 
 export const cropName = (c: string) => CROP_NAMES[c]?.name ?? c;
-export const cropSwahili = (c: string) => CROP_NAMES[c]?.sw;
 
 // grain crops are sold in 90 kg bags in Kenya
 export const BAG_CROPS = new Set(["Maize", "Wheat", "Sorghum", "Rice, paddy", "Soybeans"]);

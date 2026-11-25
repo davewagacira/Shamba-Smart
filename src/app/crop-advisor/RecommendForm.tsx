@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "motion/react";
 import { useRef, useState } from "react";
 import { Bars } from "@/components/Bars";
 import { FEATURE_INFO, cropName, meta, type CropFeature } from "@/lib/meta";
@@ -7,7 +8,6 @@ import { FEATURE_INFO, cropName, meta, type CropFeature } from "@/lib/meta";
 type Rec = {
   crop: string;
   name: string;
-  swahili: string | null;
   probability: number;
   typical: Record<CropFeature, number>;
   typical_range: Record<CropFeature, [number, number]>;
@@ -36,6 +36,7 @@ export function RecommendForm() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const resultsRef = useRef<HTMLElement>(null);
+  const [runId, setRunId] = useState(0);
 
   async function submit(v = values) {
     setLoading(true);
@@ -49,6 +50,7 @@ export function RecommendForm() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "Prediction failed");
       setResult(data);
+      setRunId((n) => n + 1);
       // on phones the results sit below the form, so bring them into view
       if (window.matchMedia("(max-width: 1023px)").matches) {
         requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
@@ -135,12 +137,17 @@ export function RecommendForm() {
           </div>
         )}
         {result && top && (
-          <>
+          <motion.div
+            key={runId}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className="space-y-5"
+          >
             <div className="rounded-3xl bg-leaf-800 p-6 text-white shadow-sm">
               <p className="text-sm text-leaf-200">Best crop for your field</p>
               <h2 className="mt-1 text-4xl font-semibold">
                 {top.name}
-                {top.swahili && <span className="ml-3 text-xl font-normal text-leaf-200">{top.swahili}</span>}
               </h2>
               <p className="mt-2 text-leaf-100">{(top.probability * 100).toFixed(0)}% confidence</p>
               {result.recommendations.slice(1).every((r) => r.probability < 0.01) && (
@@ -218,7 +225,7 @@ export function RecommendForm() {
                 format={(v) => `${(v * 100).toFixed(0)}%`}
               />
             </div>
-          </>
+          </motion.div>
         )}
       </section>
     </div>

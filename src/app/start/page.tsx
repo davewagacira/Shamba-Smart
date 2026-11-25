@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Stagger, StaggerItem } from "@/components/motion";
 
 export const metadata: Metadata = {
   title: "Get started",
@@ -42,9 +43,10 @@ export default function StartPage() {
         <p className="mx-auto mt-3 max-w-xl text-leaf-900/70">Choose where to begin. You can switch between the two at any time.</p>
       </div>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
+      <Stagger onMount className="mt-10 grid gap-5 md:grid-cols-2">
         {CHOICES.map((c) => (
-          <Link key={c.href} href={c.href} className={`group flex flex-col rounded-3xl p-7 shadow-sm transition ${c.style}`}>
+          <StaggerItem key={c.href} className="flex">
+          <Link href={c.href} className={`group flex w-full flex-col rounded-3xl p-7 shadow-sm transition hover:-translate-y-1 ${c.style}`}>
             <p className={`text-sm font-medium uppercase tracking-wider ${c.tagStyle}`}>{c.tag}</p>
             <h2 className="mt-2 text-2xl font-semibold">{c.title}</h2>
             <p className={`mt-3 ${c.muted}`}>{c.text}</p>
@@ -61,8 +63,9 @@ export default function StartPage() {
               <span className={`font-medium group-hover:underline ${c.cta}`}>Continue →</span>
             </div>
           </Link>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
 
       <p className="mt-8 text-center text-sm text-leaf-900/60">
         Not sure? <Link href="/how-it-works" className="text-leaf-700 underline">See how ShambaSmart works</Link>.

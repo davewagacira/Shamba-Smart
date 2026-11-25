@@ -25,7 +25,7 @@ const endpoints = [
   -d '{"N":76,"P":48,"K":20,"temperature":22.8,"humidity":65,"ph":6.3,"rainfall":84}'`,
     response: `{
   "recommendations": [
-    { "crop": "maize", "name": "Maize", "swahili": "Mahindi", "probability": 1,
+    { "crop": "maize", "name": "Maize", "probability": 1,
       "typical_range": { "N": [67.8, 87], "ph": [5.9, 6.6], ... } },
     ...
   ],

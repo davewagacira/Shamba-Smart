@@ -10,7 +10,7 @@ const team = ["Hashim Njoroge", "Veronicah Wanjiru", "Dit Deng", "David Wagacira
 
 const values = [
   { title: "Grounded in data", text: "Every recommendation comes from real field measurements and national harvest records, not rules of thumb." },
-  { title: "Clear, local language", text: "Results come in kilograms and 90 kg bags per acre, with Swahili crop names and practical next steps." },
+  { title: "Clear, local language", text: "Results come in kilograms and 90 kg bags per acre, with practical next steps for your soil." },
   { title: "Honest about limits", text: "We show how confident each answer is and say plainly what the data cannot tell you." },
 ];
 

@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -22,10 +24,12 @@ export const viewport: Viewport = { themeColor: "#2e6526" };
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col font-sans">
-        <Nav />
-        <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-8">{children}</main>
-        <Footer />
+      <body className="flex min-h-full flex-col overflow-x-clip font-sans">
+        <SmoothScroll>
+          <Nav />
+          <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-8">{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
