@@ -27,7 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col overflow-x-clip font-sans">
         <SmoothScroll>
           <Nav />
-          <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-8">{children}</main>
+          <main className="w-full flex-1">{children}</main>
           <Footer />
         </SmoothScroll>
       </body>

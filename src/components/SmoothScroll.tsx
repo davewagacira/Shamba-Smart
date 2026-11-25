@@ -10,7 +10,19 @@ function ResetOnNavigate() {
   const lenis = useLenis();
   const path = usePathname();
   useEffect(() => {
-    lenis?.scrollTo(0, { immediate: true });
+    if (!lenis) return;
+    const id = window.location.hash.slice(1);
+    const target = id ? document.getElementById(id) : null;
+    if (!target) {
+      lenis.scrollTo(0, { immediate: true });
+      return;
+    }
+    // let the new page lay out, then glide to the section
+    const t = setTimeout(() => {
+      lenis.resize();
+      lenis.scrollTo(target, { offset: -96, duration: 1.2 });
+    }, 300);
+    return () => clearTimeout(t);
   }, [path, lenis]);
   return null;
 }

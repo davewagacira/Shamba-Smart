@@ -36,7 +36,7 @@ const CHOICES = [
 
 export default function StartPage() {
   return (
-    <div className="mx-auto max-w-4xl py-4">
+    <div className="mx-auto w-full max-w-4xl px-5 py-12">
       <div className="text-center">
         <p className="text-sm font-medium uppercase tracking-wider text-leaf-600">Get started</p>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-leaf-900 sm:text-4xl">What would you like to do?</h1>

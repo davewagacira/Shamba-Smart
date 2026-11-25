@@ -63,7 +63,7 @@ const Code = ({ children }: { children: string }) => (
 
 export default function DevelopersPage() {
   return (
-    <div className="space-y-8">
+    <div className="mx-auto w-full max-w-6xl px-5 py-8 space-y-8">
       <div>
         <p className="text-sm font-medium uppercase tracking-wider text-leaf-600">Developers</p>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-leaf-900">ShambaSmart API</h1>

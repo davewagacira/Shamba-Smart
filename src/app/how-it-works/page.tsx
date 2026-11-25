@@ -42,7 +42,7 @@ const Sub = ({ children }: { children: React.ReactNode }) => (
 
 export default function HowItWorksPage() {
   return (
-    <div className="space-y-6">
+    <div className="mx-auto w-full max-w-6xl px-5 py-8 space-y-6">
       <div>
         <p className="text-sm font-medium uppercase tracking-wider text-leaf-600">How it works</p>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-leaf-900">Built on real data, tested on fields it has never seen</h1>

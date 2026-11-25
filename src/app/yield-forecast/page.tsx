@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function YieldForecastPage() {
   return (
-    <div>
+    <div className="mx-auto w-full max-w-6xl px-5 py-8">
       <ToolSwitcher />
       <h1 className="text-3xl font-semibold tracking-tight text-leaf-900">How much will I harvest?</h1>
       <p className="mt-2 max-w-2xl text-leaf-900/70">

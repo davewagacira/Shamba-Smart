@@ -16,7 +16,7 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="space-y-10">
+    <div className="mx-auto w-full max-w-6xl px-5 py-8 space-y-10">
       <section className="max-w-3xl">
         <p className="text-sm font-medium uppercase tracking-wider text-leaf-600">About</p>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-leaf-900">Helping every shamba make the most of its land</h1>

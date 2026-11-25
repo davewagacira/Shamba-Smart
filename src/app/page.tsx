@@ -3,6 +3,7 @@ import Link from "next/link";
 import { meta } from "@/lib/meta";
 import { CountUp, FloatIn, ParallaxImage, Reveal, Stagger, StaggerItem, ZoomImage } from "@/components/motion";
 import { PHOTOS } from "@/lib/photos";
+import { SectionLink } from "@/components/SectionLink";
 
 const correct = Math.round(meta.crop.metrics.test_accuracy * 440);
 
@@ -85,7 +86,8 @@ function HeroPreview() {
   );
 }
 
-function Feature({ photo, eyebrow, title, text, points, href, cta, reverse, overlay }: {
+function Feature({ id, photo, eyebrow, title, text, points, href, cta, reverse, overlay }: {
+  id?: string;
   photo: { src: string; alt: string };
   eyebrow: string;
   title: string;
@@ -97,7 +99,7 @@ function Feature({ photo, eyebrow, title, text, points, href, cta, reverse, over
   overlay: React.ReactNode;
 }) {
   return (
-    <section className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+    <section id={id} className="grid scroll-mt-24 items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <div className={`relative ${reverse ? "lg:order-2" : ""}`}>
         <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
           <ZoomImage src={photo.src} alt={photo.alt} sizes="(min-width: 1024px) 560px, 100vw" />
@@ -126,9 +128,9 @@ function Feature({ photo, eyebrow, title, text, points, href, cta, reverse, over
 
 export default function Home() {
   return (
-    <div className="space-y-24 pb-8">
+    <div className="pb-16">
       {/* full-bleed hero */}
-      <section id="hero" className="relative left-1/2 -mt-8 w-screen -translate-x-1/2 overflow-hidden">
+      <section id="hero" className="relative overflow-hidden">
         <ParallaxImage src={PHOTOS.hero.src} alt={PHOTOS.hero.alt} />
         <div className="absolute inset-0 bg-gradient-to-r from-leaf-900/90 via-leaf-900/65 to-leaf-900/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-leaf-900/50 to-transparent lg:hidden" />
@@ -156,9 +158,9 @@ export default function Home() {
               <Link href="/start" className="rounded-full bg-sun-400 px-6 py-3 font-semibold text-leaf-900 shadow-lg hover:brightness-95">
                 Get started free
               </Link>
-              <Link href="/how-it-works" className="rounded-full px-6 py-3 font-medium text-white ring-1 ring-white/40 hover:bg-white/10">
+              <SectionLink id="how-it-works" className="rounded-full px-6 py-3 font-medium text-white ring-1 ring-white/40 hover:bg-white/10">
                 See how it works
-              </Link>
+              </SectionLink>
             </StaggerItem>
             <StaggerItem>
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-leaf-100/85">
@@ -172,8 +174,9 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="mx-auto w-full max-w-6xl space-y-24 px-5 pt-16">
       {/* proof strip */}
-      <Reveal className="-mt-8">
+      <Reveal>
         <p className="text-center text-sm font-medium text-leaf-900/60">Built on open agricultural data from the FAO and World Bank</p>
         <div className="mt-6 grid grid-cols-2 gap-y-6 rounded-3xl border border-leaf-100 bg-white px-6 py-8 shadow-sm md:grid-cols-4">
           {proof.map((p) => (
@@ -186,6 +189,7 @@ export default function Home() {
       </Reveal>
 
       <Feature
+        id="features"
         photo={PHOTOS.seedling}
         eyebrow="Crop Advisor"
         title="Know what your land wants to grow"
@@ -226,7 +230,7 @@ export default function Home() {
         }
       />
 
-      <section>
+      <section id="how-it-works" className="scroll-mt-24">
         <Reveal className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-wider text-leaf-600">How it works</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight text-leaf-900 sm:text-4xl">From soil test to planting plan in three steps</h2>
@@ -242,7 +246,7 @@ export default function Home() {
         </Stagger>
       </section>
 
-      <section>
+      <section id="who-its-for" className="scroll-mt-24">
         <Reveal className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-wider text-leaf-600">Who it is for</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight text-leaf-900 sm:text-4xl">Made for the people who feed Kenya</h2>
@@ -262,7 +266,7 @@ export default function Home() {
       </section>
 
       <Reveal>
-      <section className="grid gap-10 rounded-3xl bg-leaf-900 px-6 py-12 text-white sm:px-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+      <section id="accuracy" className="grid scroll-mt-24 gap-10 rounded-3xl bg-leaf-900 px-6 py-12 text-white sm:px-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
         <div>
           <p className="text-sm font-medium uppercase tracking-wider text-sun-400">Proven accuracy</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Tested on fields and seasons it had never seen</h2>
@@ -285,7 +289,7 @@ export default function Home() {
       </Reveal>
 
       <Reveal>
-      <section className="grid gap-10 lg:grid-cols-[1fr_1.6fr]">
+      <section id="faq" className="grid scroll-mt-24 gap-10 lg:grid-cols-[1fr_1.6fr]">
         <div>
           <p className="text-sm font-medium uppercase tracking-wider text-leaf-600">FAQ</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight text-leaf-900 sm:text-4xl">Questions farmers ask</h2>
@@ -326,6 +330,7 @@ export default function Home() {
         </div>
       </section>
       </Reveal>
+      </div>
     </div>
   );
 }
