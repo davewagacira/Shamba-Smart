@@ -48,8 +48,8 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 gap-3">
           {stats.map((s) => (
-            <div key={s.label} className="rounded-2xl border border-leaf-100 bg-white p-5 shadow-sm">
-              <div className="text-3xl font-semibold text-leaf-700">{s.value}</div>
+            <div key={s.label} className="rounded-2xl border border-leaf-100 bg-white p-4 shadow-sm sm:p-5">
+              <div className="whitespace-nowrap text-2xl font-semibold text-leaf-700 sm:text-3xl">{s.value}</div>
               <div className="mt-1 text-sm text-leaf-900/65">{s.label}</div>
             </div>
           ))}
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-wrap items-center justify-between gap-5 rounded-3xl bg-leaf-900 px-8 py-10 text-white">
+      <section className="flex flex-wrap items-center justify-between gap-5 rounded-3xl bg-leaf-900 px-6 py-8 text-white sm:px-8 sm:py-10">
         <div>
           <h2 className="text-2xl font-semibold">Have a soil test result?</h2>
           <p className="mt-1 text-leaf-100/80">Get a crop recommendation in seconds. No sign-up needed.</p>

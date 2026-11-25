@@ -58,19 +58,19 @@ export function YieldForm() {
 
   return (
     <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_1.2fr]">
-      <div className="space-y-5 rounded-3xl border border-leaf-100 bg-white p-6 shadow-sm">
+      <div className="space-y-5 rounded-3xl border border-leaf-100 bg-white p-5 shadow-sm sm:p-6">
         <div className="grid grid-cols-2 gap-3">
           <label className="text-sm font-medium text-leaf-900">
             Country
             <select value={s.country} onChange={(e) => set({ country: e.target.value, ...defaultsFor(e.target.value) })}
-              className="mt-1 w-full rounded-lg border border-leaf-200 bg-white px-2 py-2 font-normal">
+              className="mt-1 w-full rounded-lg border border-leaf-200 bg-white px-2 py-2 text-base font-normal sm:text-sm">
               {Y.countries.map((c) => <option key={c}>{c}</option>)}
             </select>
           </label>
           <label className="text-sm font-medium text-leaf-900">
             Crop
             <select value={s.crop} onChange={(e) => set({ crop: e.target.value })}
-              className="mt-1 w-full rounded-lg border border-leaf-200 bg-white px-2 py-2 font-normal">
+              className="mt-1 w-full rounded-lg border border-leaf-200 bg-white px-2 py-2 text-base font-normal sm:text-sm">
               {Y.crops.map((c) => <option key={c}>{c}</option>)}
             </select>
           </label>
@@ -96,7 +96,7 @@ export function YieldForm() {
         </p>
       </div>
 
-      <section className="space-y-5">
+      <section className="space-y-5 pb-20 lg:pb-0">
         <div className="rounded-3xl bg-soil-100 p-6 shadow-sm">
           <p className="text-sm text-soil-700">Expected {s.crop.toLowerCase()} harvest in {s.country}, {s.year}</p>
           {pred ? (
@@ -153,6 +153,18 @@ export function YieldForm() {
           </div>
         )}
       </section>
+
+      {pred && (
+        <div className="fixed inset-x-0 bottom-0 z-20 border-t border-soil-300 bg-soil-100/95 px-5 py-3 shadow-[0_-4px_12px_rgba(0,0,0,0.06)] backdrop-blur lg:hidden">
+          <div className="mx-auto flex max-w-6xl items-baseline justify-between gap-3">
+            <span className="truncate text-sm text-soil-700">{s.crop}, {s.country} {s.year}</span>
+            <span className="whitespace-nowrap font-semibold text-leaf-900 tabular-nums">
+              {pred.yield_t_ha.toFixed(2)} t/ha
+              {pred.bags_90kg_acre !== null && <span className="ml-2 text-sm font-normal text-leaf-900/70">· {pred.bags_90kg_acre} bags/acre</span>}
+            </span>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

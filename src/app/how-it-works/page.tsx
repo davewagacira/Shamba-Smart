@@ -20,7 +20,7 @@ const kenya = Object.entries(Y.kenya_history)
 
 function Card({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-3xl border border-leaf-100 bg-white p-6 shadow-sm">
+    <div className="rounded-3xl border border-leaf-100 bg-white p-5 shadow-sm sm:p-6">
       <h2 className="mb-4 text-lg font-semibold text-leaf-900">{title}</h2>
       {children}
     </div>
@@ -29,8 +29,8 @@ function Card({ title, children }: { title: string; children: React.ReactNode })
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-2xl bg-leaf-50 p-4">
-      <p className="text-2xl font-semibold text-leaf-700 tabular-nums">{value}</p>
+    <div className="rounded-2xl bg-leaf-50 p-3 sm:p-4">
+      <p className="whitespace-nowrap text-lg font-semibold text-leaf-700 tabular-nums sm:text-2xl">{value}</p>
       <p className="text-xs text-leaf-900/60">{label}</p>
     </div>
   );
@@ -56,7 +56,7 @@ export default function HowItWorksPage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <Card title="Crop Advisor">
           <div className="grid grid-cols-3 gap-3">
-            <Stat value={`${correct} / ${testFields}`} label="test fields matched to the right crop" />
+            <Stat value={`${correct}/${testFields}`} label="test fields matched to the right crop" />
             <Stat value={`${C.classes.length}`} label="crops covered" />
             <Stat value="7" label="soil and climate factors" />
           </div>

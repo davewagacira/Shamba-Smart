@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Bars } from "@/components/Bars";
 import { FEATURE_INFO, cropName, meta, type CropFeature } from "@/lib/meta";
 
@@ -35,6 +35,7 @@ export function RecommendForm() {
   const [result, setResult] = useState<Response | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const resultsRef = useRef<HTMLElement>(null);
 
   async function submit(v = values) {
     setLoading(true);
@@ -48,6 +49,10 @@ export function RecommendForm() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "Prediction failed");
       setResult(data);
+      // on phones the results sit below the form, so bring them into view
+      if (window.matchMedia("(max-width: 1023px)").matches) {
+        requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Prediction failed");
     } finally {
@@ -66,7 +71,7 @@ export function RecommendForm() {
   return (
     <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_1.1fr]">
       <form
-        className="rounded-3xl border border-leaf-100 bg-white p-6 shadow-sm"
+        className="rounded-3xl border border-leaf-100 bg-white p-5 shadow-sm sm:p-6"
         onSubmit={(e) => {
           e.preventDefault();
           submit();
@@ -77,7 +82,7 @@ export function RecommendForm() {
           <div className="mt-2 flex flex-wrap gap-2">
             {EXAMPLES.map((c) => (
               <button key={c} type="button" onClick={() => loadExample(c)}
-                className="rounded-full border border-leaf-200 px-3 py-1 text-sm text-leaf-800 hover:bg-leaf-50">
+                className="rounded-full border border-leaf-200 px-3 py-1.5 text-sm text-leaf-800 hover:bg-leaf-50">
                 {cropName(c)}
               </button>
             ))}
@@ -97,7 +102,7 @@ export function RecommendForm() {
                       step={info.step}
                       value={values[f]}
                       onChange={(e) => setValues({ ...values, [f]: Number(e.target.value) })}
-                      className="w-20 rounded-md border border-leaf-200 px-2 py-0.5 text-right tabular-nums"
+                      className="w-20 rounded-md border border-leaf-200 px-2 py-1 text-right text-base tabular-nums sm:py-0.5 sm:text-sm"
                     />
                     <span className="w-10 text-leaf-900/50">{info.unit}</span>
                   </span>
@@ -123,7 +128,7 @@ export function RecommendForm() {
         {error && <p className="mt-3 text-sm text-red-700">{error}</p>}
       </form>
 
-      <section className="space-y-5">
+      <section ref={resultsRef} className="scroll-mt-20 space-y-5">
         {!result && (
           <div className="flex h-full min-h-64 items-center justify-center rounded-3xl border-2 border-dashed border-leaf-200 p-8 text-center text-leaf-900/50">
             Enter your field details and select “Get recommendation” to see the crops that suit your land.
