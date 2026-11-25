@@ -108,7 +108,7 @@ export default function Home() {
           <p className="mt-1 text-leaf-100/80">Get a crop recommendation in seconds. No sign-up needed.</p>
         </div>
         <Link href="/crop-advisor" className="rounded-full bg-sun-400 px-6 py-3 font-medium text-leaf-900 hover:brightness-95">
-          Try the Crop Advisor
+          Open Crop Advisor
         </Link>
       </section>
     </div>

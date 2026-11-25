@@ -6,17 +6,19 @@ import { useState } from "react";
 import { Logo } from "@/components/Logo";
 
 const LINKS = [
-  { href: "/crop-advisor", label: "Crop Advisor" },
-  { href: "/yield-forecast", label: "Yield Forecast" },
   { href: "/how-it-works", label: "How it works" },
   { href: "/developers", label: "Developers" },
   { href: "/about", label: "About" },
 ];
 
+// pages that are already inside the product, where "Get started" makes no sense
+const APP_ROUTES = ["/start", "/crop-advisor", "/yield-forecast"];
+
 export function Nav() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
+  const inApp = APP_ROUTES.includes(path);
 
   return (
     <header className="sticky top-0 z-30 border-b border-leaf-100 bg-cream/95 backdrop-blur">
@@ -26,7 +28,7 @@ export function Nav() {
           <span className="text-lg tracking-tight">ShambaSmart</span>
         </Link>
 
-        <div className="ml-auto hidden items-center gap-1 whitespace-nowrap text-sm lg:flex">
+        <div className="ml-auto hidden items-center gap-1 whitespace-nowrap text-sm md:flex">
           {LINKS.map((l) => (
             <Link
               key={l.href}
@@ -38,9 +40,11 @@ export function Nav() {
               {l.label}
             </Link>
           ))}
-          <Link href="/crop-advisor" className="ml-2 rounded-full bg-leaf-700 px-4 py-1.5 font-medium text-white hover:bg-leaf-800">
-            Get started
-          </Link>
+          {!inApp && (
+            <Link href="/start" className="ml-2 rounded-full bg-leaf-700 px-4 py-1.5 font-medium text-white hover:bg-leaf-800">
+              Get started
+            </Link>
+          )}
         </div>
 
         <button
@@ -48,7 +52,7 @@ export function Nav() {
           onClick={() => setOpen((o) => !o)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="ml-auto flex h-10 w-10 items-center justify-center rounded-full text-leaf-900 hover:bg-leaf-50 lg:hidden"
+          className="ml-auto flex h-10 w-10 items-center justify-center rounded-full text-leaf-900 hover:bg-leaf-50 md:hidden"
         >
           <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
             {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
@@ -57,7 +61,7 @@ export function Nav() {
       </nav>
 
       {open && (
-        <div className="border-t border-leaf-100 bg-cream px-5 pb-5 pt-2 lg:hidden">
+        <div className="border-t border-leaf-100 bg-cream px-5 pb-5 pt-2 md:hidden">
           <ul className="space-y-1">
             {LINKS.map((l) => (
               <li key={l.href}>
@@ -73,10 +77,12 @@ export function Nav() {
               </li>
             ))}
           </ul>
-          <Link href="/crop-advisor" onClick={close}
-            className="mt-3 block rounded-full bg-leaf-700 py-3 text-center font-medium text-white hover:bg-leaf-800">
-            Get started
-          </Link>
+          {!inApp && (
+            <Link href="/start" onClick={close}
+              className="mt-3 block rounded-full bg-leaf-700 py-3 text-center font-medium text-white hover:bg-leaf-800">
+              Get started
+            </Link>
+          )}
         </div>
       )}
     </header>

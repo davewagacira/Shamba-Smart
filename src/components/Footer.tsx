@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 
 const COLUMNS = [
-  { title: "Product", links: [["Crop Advisor", "/crop-advisor"], ["Yield Forecast", "/yield-forecast"], ["How it works", "/how-it-works"]] },
+  { title: "Product", links: [["Get started", "/start"], ["Crop Advisor", "/crop-advisor"], ["Yield Forecast", "/yield-forecast"], ["How it works", "/how-it-works"]] },
   { title: "Resources", links: [["Developer API", "/developers"], ["About us", "/about"]] },
 ];
 
